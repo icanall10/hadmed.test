@@ -3,10 +3,17 @@ html body {
   color: #1A1B1C;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
+  font-weight: normal;
   line-height: 1.42;
   margin: 0;
   padding: 0;
   min-width: 320px;
+}
+p {
+  margin-bottom: 16px;
+}
+p:last-child {
+  margin-bottom: 0;
 }
 a {
   color: var(--color-main);
@@ -56,8 +63,19 @@ a {
 .flex-column {
   flex-direction: column;
 }
+.align-center {
+  text-align: center;
+}
 .form-group {
   margin-bottom: 16px;
+}
+.form-group.item-actions button,
+.form-group.item-actions .button {
+  margin-right: 16px;
+}
+.form-group.item-actions button:last-child,
+.form-group.item-actions .button:last-child {
+  margin-right: 0;
 }
 .form-group:last-child {
   margin-bottom: 0;
@@ -67,7 +85,8 @@ a {
   margin-bottom: 8px;
   line-height: 1.35;
 }
-.form-group input[type="text"] {
+.form-group input[type="text"],
+.form-group input[type="password"] {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -76,31 +95,45 @@ a {
   padding: 0 12px;
   box-sizing: border-box;
   height: 36px;
-  border: 1px solid #0E7ABC;
+  border: 1px solid var(--color-main);
   border-radius: 8px;
   width: 100%;
 }
-.form-group input[type="text"]::-moz-placeholder {
+.form-group input[type="text"]::-moz-placeholder, .form-group input[type="password"]::-moz-placeholder {
   color: #A7BBC7;
 }
-.form-group input[type="text"]:-ms-input-placeholder {
+.form-group input[type="text"]:-ms-input-placeholder, .form-group input[type="password"]:-ms-input-placeholder {
   color: #A7BBC7;
 }
-.form-group input[type="text"]::placeholder {
+.form-group input[type="text"]::placeholder,
+.form-group input[type="password"]::placeholder {
   color: #A7BBC7;
 }
-.form-group button {
+button,
+.button {
   font-family: 'Montserrat', Arial, sans-serif;
   text-align: center;
   padding: 0 20px;
   box-sizing: border-box;
   min-height: 34px;
-  background: #0E7ABC;
+  background: var(--color-main);
   border-radius: 8px;
   border: none;
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
+  cursor: pointer;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button.white,
+.button.white {
+  border: 2px solid var(--color-main);
+  background: #fff;
+  color: var(--color-main);
+  position: relative;
 }
 .segment {
   border: 2px solid #0E7ABC;
@@ -149,5 +182,8 @@ a {
 .auth-layout .right > .content {
   width: 480px;
   max-width: 100%;
+}
+.auth-layout .right > .content.small {
+  width: 400px;
 }
 
