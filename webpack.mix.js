@@ -19,12 +19,14 @@ mix.styles([
     'resources/css/fonts.css',
     'resources/css/icons.css',
     'resources/vendor/jquery-ui-1.13.1.custom/jquery-ui.structure.min.css',
+    'resources/vendor/simplebar/simplebar.css',
     'resources/css/style.css'
 ], 'public/css/all.css');
 
 mix.scripts([
     'resources/vendor/jquery-3.5.1.min.js',
     'resources/vendor/jquery-ui-1.13.1.custom/jquery-ui.min.js',
+    'resources/vendor/simplebar/simplebar.min.js',
     'resources/js/helpers.js',
     'resources/js/js.js'
 ], 'public/js/all.js');
