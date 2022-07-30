@@ -205,6 +205,15 @@ html body {
 #wrapper #right {
   background: #EEF1F8;
   overflow: auto;
+  padding: 24px 48px;
+  box-sizing: border-box;
+}
+.block-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0e7abc;
+  padding: 8px 0;
+  margin-bottom: 24px;
 }
 p {
   margin-bottom: 16px;
@@ -573,5 +582,71 @@ button .i,
 .table .tr .td .tag.blue {
   background: #CAF0FB;
   color: #01AEEE;
+}
+.tabs {
+  display: flex;
+  margin-bottom: 24px;
+}
+.tabs a {
+  width: 100%;
+  min-width: 0;
+  color: #a7bbc7;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  line-height: 1.33;
+  padding: 12px 0;
+  box-sizing: border-box;
+  border-bottom: 2px solid #A7BBC7;
+}
+.tabs a:hover {
+  color: var(--color-main);
+}
+.tabs a.active {
+  border-color: var(--color-main);
+  color: var(--color-main);
+}
+.patient-card-block .info .name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+.patient-card-block .info .fields {
+  margin-bottom: 24px;
+}
+.patient-card-block .info .fields .field {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 8px;
+}
+.patient-card-block .info .fields .field:last-child {
+  margin-bottom: 0;
+}
+.patient-card-block .info .fields .field .label {
+  color: #A7BBC7;
+  font-weight: 500;
+}
+.patient-card-block .info .fields .field .value {
+  font-size: 16px;
+  font-weight: 500;
+}
+.patient-card-block .info .help {
+  font-style: italic;
+}
+.patient-card-block .info .actions {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.patient-card-block .info .actions .button {
+  margin-right: 24px;
+}
+.patient-card-block .info .actions .button:last-child {
+  margin-right: 0;
 }
 
