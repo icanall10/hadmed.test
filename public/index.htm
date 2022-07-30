@@ -5,11 +5,140 @@
         <title>Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="./css/all.css">
     </head>
     <body>
 
+        <div id="wrapper">
+            <div id="left">
+                <div class="sidebar-header-block">
+                    <a href="#" class="logo">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <a href="#" class="profile">
+                        <span class="i i-user"></span>
+                        Профиль
+                    </a>
+                </div>
 
+                <div class="sidebar-menu-block">
+                    <ul>
+                        <li class="active">
+                            <a href="#">
+                                <span class="i i-list icon-default"></span>
+                                <span class="i i-list-colored icon-colored"></span>
+                                <span>Пациенты</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="i i-eat icon-default"></span>
+                                <span class="i i-eat-colored icon-colored"></span>
+                                <span>Меню</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="i i-box icon-default"></span>
+                                <span class="i i-box-colored icon-colored"></span>
+                                <span>Архив</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-petrushka-block">
+                    <a href="#">
+                        <img src="./img/petrushka.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div id="center">
+                <div class="header-block">
+                    <div class="title">Ваши пациенты</div>
+                    <a href="#" class="button">
+                        <span class="i i-plus"></span>
+                        Добавить
+                    </a>
+                </div>
+
+                <div class="table" data-columns="30% 20% 30% 20%">
+                    <div class="tr">
+                        <div class="th">
+                            <a href="#" class="sort desc active">фио пациента</a>
+                        </div>
+                        <div class="th">
+                            <a href="#" class="sort">палата</a>
+                        </div>
+                        <div class="th">
+                            <a href="#" class="sort">отделение</a>
+                        </div>
+                        <div class="th">
+                            <a href="#" class="sort">диета</a>
+                        </div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">
+                            <div class="name">Смирнова А.С</div>
+                        </div>
+                        <div class="td">307</div>
+                        <div class="td">Гастроэнтерология</div>
+                        <div class="td">
+                            <span class="tag blue">НКД</span>
+                        </div>
+                    </div>
+                    <div class="tr active">
+                        <div class="td">
+                            <div class="name">Смирнова А.С</div>
+                        </div>
+                        <div class="td">307</div>
+                        <div class="td">Гастроэнтерология</div>
+                        <div class="td">
+                            <span class="tag green">ЩД</span>
+                        </div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">
+                            <div class="name">Смирнова А.С</div>
+                        </div>
+                        <div class="td">307</div>
+                        <div class="td">Гастроэнтерология</div>
+                        <div class="td">
+                            <span class="tag purple">ВКД</span>
+                        </div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">
+                            <div class="name">Смирнова А.С</div>
+                        </div>
+                        <div class="td">307</div>
+                        <div class="td">Гастроэнтерология</div>
+                        <div class="td">
+                            <span class="tag mint">ОВД б/с</span>
+                        </div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">
+                            <div class="name">Смирнова А.С</div>
+                        </div>
+                        <div class="td">307</div>
+                        <div class="td">Гастроэнтерология</div>
+                        <div class="td">
+                            <span class="tag yellow">ЩД</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="right">
+
+            </div>
+        </div>
 
         <script src="./js/all.js"></script>
     </body>
