@@ -49,15 +49,19 @@ html {
 }
 
 
-.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-    background: var(--color-main);
+.simplebar-track.simplebar-vertical {
+    .simplebar-scrollbar:before {
+        background: var(--color-main);
+    }
 }
 
 
-//[data-fade-toggle] {
-//    display: none;
-//}
+[data-fade-toggle] {
+    display: none;
+}
 
+
+// mfp
 
 .mfp-bg {
     background: #EEF1F8;
@@ -84,6 +88,42 @@ html {
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml,%3Csvg width='512px' height='512px' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Eionicons-v5-m%3C/title%3E%3Cpath d='M289.94,256l95-95A24,24,0,0,0,351,127l-95,95-95-95A24,24,0,0,0,127,161l95,95-95,95A24,24,0,1,0,161,385l95-95,95,95A24,24,0,0,0,385,351Z'/%3E%3C/svg%3E");
+}
+
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+.mfp-fade.mfp-wrap {
+    .mfp-content {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+    }
+}
+
+.mfp-fade.mfp-wrap.mfp-ready {
+    .mfp-content {
+        opacity: 1;
+    }
+}
+
+.mfp-fade.mfp-wrap.mfp-removing {
+    .mfp-content {
+        opacity: 0;
+    }
 }
 
 
@@ -410,6 +450,7 @@ button,
             width: 200px;
 
             .segment {
+                background: #fff;
                 padding: 12px 24px;
             }
 
@@ -1053,6 +1094,7 @@ body {
         font-weight: 600;
         line-height: 1.33;
     }
+
     .text {
         margin-top: 16px;
         text-align: center;
