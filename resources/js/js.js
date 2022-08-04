@@ -19,7 +19,7 @@
                         src: modal[0]
                     },
                     type: 'inline',
-                    mainClass: $(this).attr('data-modal') + '-modal',
+                    mainClass: $(this).attr('data-modal') + '-modal mfp-fade',
                     closeOnBgClick: false,
                     showCloseBtn: true,
                     callbacks: {
@@ -32,8 +32,7 @@
                         }
                     },
 
-                    removalDelay: 300,
-                    mainClass: 'mfp-fade'
+                    removalDelay: 300
                 });
             });
 
@@ -61,6 +60,15 @@
                     time: true,
                     timePattern: ['h', 'm']
                 });
+            });
+
+
+        $('.switch')
+            .once('switch', function () {
+                let $this = $(this);
+                let count = $this.find('a').length;
+
+                $this.css('grid-template-columns', 'repeat(' + count + ', minmax(0, 1fr))');
             });
 
 
