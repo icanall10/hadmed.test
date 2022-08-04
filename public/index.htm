@@ -19,10 +19,22 @@
                     <a href="#" class="logo">
                         <img src="./img/logo.svg" alt="">
                     </a>
-                    <a href="#" class="profile">
-                        <span class="i i-user"></span>
-                        Профиль
-                    </a>
+                    <div class="profile">
+                        <a href="#" class="label" data-fade-toggle-link="profile-info">
+                            <span class="i i-user"></span>
+                            Профиль
+                        </a>
+                        <div class="info" data-fade-toggle="profile-info">
+                            <div class="segment">
+                                <div class="name">В. Вайнштейн</div>
+                                <div class="email">mail@example.com</div>
+                                <div class="links">
+                                    <a href="#">Выйти</a>
+                                    <a href="#" data-modal-link="profile-form">Изменить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="sidebar-menu-block">
@@ -377,7 +389,7 @@
                             рекомендована мягкая и жидкая пища
                         </div>
                         <div class="actions">
-                            <a href="#" class="button">Редактировать</a>
+                            <a href="#" class="button" data-modal-link="patient-form">Редактировать</a>
                             <a href="#" class="button white">Архивировать</a>
                         </div>
                     </div>
@@ -560,6 +572,100 @@
                 </div>
             </div>
         </div>
+
+
+        <div data-modal="profile-form" data-modal-width="480">
+            <div class="title">Редактировать профиль</div>
+            <form action="#">
+                <div class="form-group">
+                    <label for="#">E-mail</label>
+                    <input type="text" value="mail@example.com">
+                </div>
+                <div class="form-group item-actions flex flex-center">
+                    <button type="submit">Сохранить</button>
+                    <a href="#" class="button white">Изменить пароль</a>
+                </div>
+            </form>
+        </div>
+
+
+        <div data-modal="patient-form" data-modal-width="480">
+            <div class="title">Редактировать профиль пациента</div>
+            <form action="#">
+                <div class="form-group">
+                    <label for="#">ФИО пациента</label>
+                    <input type="text" name="name" value="Смирнова Антонина Сергеевна">
+                </div>
+                <div class="form-group">
+                    <label for="#">Дата госпитализации</label>
+                    <input type="text" name="date" value="12.07.2022" data-datepicker>
+                </div>
+                <div class="form-group">
+                    <label for="#">Время госпитализации</label>
+                    <input type="text" name="time" value="14:00" data-timemask>
+                </div>
+                <div class="form-group">
+                    <label for="#">Отделение</label>
+                    <select name="department">
+                        <option value="1">Гастроэнетерология</option>
+                        <option value="2">Терапия</option>
+                        <option value="3">Хирургия</option>
+                        <option value="4">Травматология</option>
+                        <option value="5">Гематология</option>
+                        <option value="6">Неврология</option>
+                        <option value="7">Гастроэнетерология</option>
+                        <option value="8">Терапия</option>
+                        <option value="9">Терапия</option>
+                        <option value="10">Гастроэнетерология</option>
+                        <option value="11">Терапия</option>
+                        <option value="12">Хирургия</option>
+                        <option value="13">Травматология</option>
+                        <option value="14">Гематология</option>
+                        <option value="15">Неврология</option>
+                        <option value="16">Гастроэнетерология</option>
+                        <option value="17">Терапия</option>
+                        <option value="18">Терапия</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="#">Диета</label>
+                    <select name="diet">
+                        <option value="1">Стандартная диета (ОВД)</option>
+                        <option value="2">Стандартная диета без сахара (ОВД без сахара)</option>
+                        <option value="3">Щадящая диета (ЩД)</option>
+                        <option value="4">Высокобелковая диета (ВБД)</option>
+                        <option value="5">Низкобелковая диета (НБД)</option>
+                        <option value="6">Низкокалорийная диета (НКД)</option>
+                        <option value="7"> Стандартная диета (ОВД)</option>
+                        <option value="8">Стандартная диета без сахара (ОВД без сахара)</option>
+                        <option value="9">Щадящая диета (ЩД)</option>
+                        <option value="10">Высокобелковая диета (ВБД)</option>
+                        <option value="11">Низкобелковая диета (НБД)</option>
+                        <option value="12">Низкокалорийная диета (НКД)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="#">Номер палаты</label>
+                    <select name="number">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="#">Комментарий</label>
+                    <textarea name="comment">Аллергия на арахис, непереносимость лактозы, рекомендована мягкая и жидкая пища</textarea>
+                </div>
+            </form>
+        </div>
+
 
         <script src="./js/all.js"></script>
     </body>

@@ -18,15 +18,20 @@ mix.styles([
     'resources/css/variables.css',
     'resources/css/fonts.css',
     'resources/css/icons.css',
-    'resources/vendor/jquery-ui-1.13.1.custom/jquery-ui.structure.min.css',
     'resources/vendor/simplebar/simplebar.css',
+    'resources/vendor/magnific-popup/magnific-popup.css',
+    'resources/vendor/flatpickr/flatpickr.min.css',
     'resources/css/style.css'
 ], 'public/css/all.css');
 
 mix.scripts([
     'resources/vendor/jquery-3.5.1.min.js',
-    'resources/vendor/jquery-ui-1.13.1.custom/jquery-ui.min.js',
     'resources/vendor/simplebar/simplebar.min.js',
+    'resources/vendor/magnific-popup/magnific-popup.min.js',
+    'resources/vendor/flatpickr/flatpickr.js',
+    'resources/vendor/flatpickr/ru.js',
+    'resources/vendor/cleave.min.js',
+    'resources/vendor/select2.full.min.js',
     'resources/js/helpers.js',
     'resources/js/js.js'
 ], 'public/js/all.js');
