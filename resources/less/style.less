@@ -65,6 +65,9 @@ html {
 }
 
 .mfp-close-btn-in .mfp-close {
+    top: 0 !important;
+    right: 0 !important;
+
     text-align: left;
     overflow: hidden;
     text-indent: -9999px;
@@ -85,6 +88,8 @@ html {
 
 
 [data-modal] {
+    display: none;
+
     background: #fff;
     border: 2px solid #0E7ABC;
     border-radius: 16px;
@@ -97,6 +102,10 @@ html {
         margin-bottom: 16px;
         line-height: 1.35;
     }
+}
+
+.mfp-content [data-modal] {
+    display: block;
 }
 
 
@@ -225,6 +234,7 @@ a {
             color: #A7BBC7;
         }
     }
+
     textarea {
         display: block;
         font-size: 14px;
@@ -1022,3 +1032,47 @@ body {
     }
 }
 
+
+.message-block {
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 16px;
+
+        .i {
+            width: 64px;
+            height: 56px;
+        }
+    }
+
+    .title {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.33;
+    }
+    .text {
+        margin-top: 16px;
+        text-align: center;
+    }
+}
+
+
+.confirm-block {
+    .buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        button,
+        .button {
+            margin-right: 16px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

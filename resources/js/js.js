@@ -40,9 +40,7 @@
             .click(function (e) {
                 e.preventDefault();
 
-                $(this)
-                    .closest('[data-modal]')
-                    .dialog('close');
+                $.magnificPopup.close();
             });
 
 

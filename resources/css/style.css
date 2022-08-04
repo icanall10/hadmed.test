@@ -45,6 +45,8 @@ html body {
   opacity: 0.5;
 }
 .mfp-close-btn-in .mfp-close {
+  top: 0 !important;
+  right: 0 !important;
   text-align: left;
   overflow: hidden;
   text-indent: -9999px;
@@ -61,6 +63,7 @@ html body {
   background-image: url("data:image/svg+xml,%3Csvg width='512px' height='512px' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Eionicons-v5-m%3C/title%3E%3Cpath d='M289.94,256l95-95A24,24,0,0,0,351,127l-95,95-95-95A24,24,0,0,0,127,161l95,95-95,95A24,24,0,1,0,161,385l95-95,95,95A24,24,0,0,0,385,351Z'/%3E%3C/svg%3E");
 }
 [data-modal] {
+  display: none;
   background: #fff;
   border: 2px solid #0E7ABC;
   border-radius: 16px;
@@ -72,6 +75,9 @@ html body {
   font-weight: 600;
   margin-bottom: 16px;
   line-height: 1.35;
+}
+.mfp-content [data-modal] {
+  display: block;
 }
 .block-title {
   font-size: 24px;
@@ -790,5 +796,38 @@ body .flatpickr-day.endRange.nextMonthDay {
   right: 0;
   opacity: 1;
   background: #69A0C3;
+}
+.message-block .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.message-block .icon .i {
+  width: 64px;
+  height: 56px;
+}
+.message-block .title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+.message-block .text {
+  margin-top: 16px;
+  text-align: center;
+}
+.confirm-block .buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.confirm-block .buttons button,
+.confirm-block .buttons .button {
+  margin-right: 16px;
+}
+.confirm-block .buttons button:last-child,
+.confirm-block .buttons .button:last-child {
+  margin-right: 0;
 }
 

@@ -16,16 +16,18 @@
         <div class="flex flex-center flex-middle" style="height: 100vh">
             <a href="#"
                class="button"
-               data-modal-link="email-changed"
-            >Открыть окно "Email успешно изменён"</a>
+               data-modal-link="error"
+            >Открыть окно с ошибкой</a>
         </div>
 
-        <div data-modal="email-changed" data-modal-width="480">
-            <div class="email-changed-block">
+        <div data-modal="error" data-modal-width="400">
+            <div class="message-block">
                 <div class="icon">
-                    <div class="i i-ok"></div>
+                    <div class="i i-x"></div>
                 </div>
-                <div class="text">Email успешно изменён</div>
+                <div class="title">
+                    Произошла ошибка, попробуйте ещё раз. Если ошибка повторяется, обратитесь к администратору.
+                </div>
             </div>
         </div>
 
