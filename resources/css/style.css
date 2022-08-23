@@ -46,8 +46,8 @@ body.small-left #wrapper {
 body.small-left #wrapper #left {
   background: #EEF1F8;
 }
-body.has-right.small-left {
-  grid-template-columns: minmax(0, 80px) minmax(0, 50%) minmax(0, 1fr);
+body.has-right.small-left #wrapper {
+  grid-template-columns: minmax(0, 80px) minmax(0, 65%) minmax(0, 1fr);
 }
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
   background: var(--color-main);
@@ -1040,5 +1040,112 @@ body .flatpickr-day.endRange.nextMonthDay {
   display: block;
   width: 100%;
   height: auto;
+}
+.eat-grid-interactive {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.eat-grid-interactive .item {
+  border: 1px solid #0E7ABC;
+  background: #EEF1F8;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.eat-grid-interactive .item .info {
+  padding: 16px;
+  position: relative;
+}
+.eat-grid-interactive .item .info .name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+.eat-grid-interactive .item .info .value {
+  color: #a7bbc7;
+  font-size: 13px;
+}
+.eat-grid-interactive .item .info .text {
+  font-size: 12px;
+  position: absolute;
+  margin-top: -8px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 16px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+.eat-grid-interactive .item .info .choose {
+  position: absolute;
+  top: 100%;
+  left: 12px;
+  right: 12px;
+  margin-top: 12px;
+  padding: 8px 20px;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.16;
+  font-weight: 500;
+  color: var(--color-main);
+  text-align: center;
+  z-index: 1;
+  transition: opacity 250ms ease;
+}
+.eat-grid-interactive .item .img {
+  position: relative;
+  transition: opacity 250ms ease;
+}
+.eat-grid-interactive .item .img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0 0 16px 16px;
+}
+.eat-grid-interactive .item .toggle {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 1;
+  transition: opacity 250ms ease;
+}
+.eat-grid-interactive .item .toggle a {
+  display: block;
+  background: #fff;
+  color: var(--color-main);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 16px;
+  border-radius: 100px;
+}
+.eat-grid-interactive .item.open .info .text {
+  opacity: 1;
+  z-index: 2;
+}
+.eat-grid-interactive .item.open .info .choose {
+  opacity: 0;
+}
+.eat-grid-interactive .item.open .img {
+  opacity: 0;
+}
+.eat-grid-interactive .item.open .toggle {
+  opacity: 0;
+}
+.eat-grid-interactive .item.active {
+  border-color: #0E7ABC;
+}
+.eat-grid-interactive .item.active .info .choose {
+  opacity: 0;
+  z-index: -1;
+}
+.eat-grid-interactive .item:not(.active) .info .name {
+  opacity: 0.3;
 }
 

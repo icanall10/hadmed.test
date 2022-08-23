@@ -268,6 +268,34 @@
                     .fadeToggle('fast');
             });
 
+
+        $('[data-eat-grid-interactive] [data-toggle]')
+            .once()
+            .click(function (e) {
+                e.preventDefault();
+
+                $(this)
+                    .closest('.item')
+                    .toggleClass('open');
+            });
+
+
+        $('[data-eat-grid-interactive] [data-choose]')
+            .once()
+            .click(function (e) {
+                e.preventDefault();
+
+                let $this = $(this);
+                let item = $this.closest('[data-item]');
+                let grid = $this.closest('[data-eat-grid-interactive]');
+
+                grid
+                    .find('[data-item]')
+                    .removeClass('active');
+
+                item.addClass('active');
+            });
+
     }
 
 
