@@ -293,7 +293,7 @@
             });
 
 
-        $('[data-eat-grid-interactive] [data-toggle]')
+        $('[data-eat-choose-grid] [data-toggle]')
             .once()
             .click(function (e) {
                 e.preventDefault();
@@ -304,20 +304,99 @@
             });
 
 
-        $('[data-eat-grid-interactive] [data-choose]')
+        $('[data-eat-choose-grid] [data-choose]')
             .once()
             .click(function (e) {
                 e.preventDefault();
 
                 let $this = $(this);
                 let item = $this.closest('[data-item]');
-                let grid = $this.closest('[data-eat-grid-interactive]');
+                let grid = $this.closest('[data-eat-choose-grid]');
 
                 grid
                     .find('[data-item]')
                     .removeClass('active');
 
                 item.addClass('active');
+            });
+
+
+        $('[data-eat-history-grid] [data-toggle]')
+            .once()
+            .click(function (e) {
+                e.preventDefault();
+
+                $(this)
+                    .closest('.item')
+                    .toggleClass('open');
+            });
+
+
+        $('.review-form .item-rating')
+            .once()
+            .on('update', function (e, value) {
+                value = value ?? 0;
+
+                if (value === 0) return;
+
+                let $this = $(this);
+                let stars = $this.find('.star');
+
+                stars.removeClass('active');
+
+                for (let i = 1; i <= value; i++) {
+                    stars
+                        .filter('[data-value="' + i + '"]')
+                        .addClass('active');
+                }
+            })
+            .each(function () {
+                let $this = $(this);
+                let form = $this.closest('form');
+                let value = form.find('input[name="rating"]').val();
+
+                $this.trigger('update', [value]);
+            })
+            .find('.star')
+            .on('update', function () {
+                let $this = $(this);
+
+                $this
+                    .closest('.item-rating')
+                    .trigger('update', [$this.attr('data-value')]);
+            })
+            .hover(
+                function () {
+                    let $this = $(this);
+                    let item = $this.closest('.item-rating');
+
+                    item.addClass('hover');
+
+                    $this.trigger('update');
+                },
+                function () {
+                    let $this = $(this);
+                    let item = $this.closest('.item-rating');
+                    let form = $this.closest('form');
+                    let value = form.find('input[name="rating"]').val();
+
+                    item.removeClass('hover');
+
+                    $(this).trigger('update', [value]);
+                }
+            )
+            .click(function (e) {
+                e.preventDefault();
+
+                let $this = $(this);
+                let item = $this.closest('.item-rating');
+                let form = $this.closest('form');
+
+                item.removeClass('hover');
+
+                form.find('input[name="rating"]').val(
+                    $this.attr('data-value')
+                );
             });
 
     }

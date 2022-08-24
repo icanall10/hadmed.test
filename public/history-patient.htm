@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./css/all.css">
+    </head>
+    <body class="has-right small-left">
+
+        <div id="wrapper">
+            <div id="left">
+                <div class="sidebar-header-block">
+                    <a href="#" class="logo">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <div class="profile">
+                        <a href="#" class="label" data-fade-toggle-link="profile-info">
+                            <span class="icon"></span>
+                            Профиль
+                        </a>
+                        <div class="info" data-fade-toggle="profile-info">
+                            <div class="segment">
+                                <div class="name">Смирнова А.С.</div>
+                                <div class="value">
+                                    <span>Отделение</span>
+                                    Гастроэнтерология
+                                </div>
+                                <div class="value">
+                                    <span>Диета</span>
+                                    Стандартная диета (ОВД)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-menu-block">
+                    <ul>
+                        <li>
+                            <a href="./menu-patient.htm">
+                                <span class="i i-eat icon-default"></span>
+                                <span class="i i-eat-colored icon-colored"></span>
+                                <span>Меню</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="./history-patient.htm">
+                                <span class="i i-box icon-default"></span>
+                                <span class="i i-box-colored icon-colored"></span>
+                                <span>Архив</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-petrushka-block">
+                    <a href="#">
+                        <img src="./img/petrushka.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div id="center" data-simplebar>
+                <div class="header-block">
+                    <div class="title">История заказов</div>
+
+                    <form class="date-form">
+                        <div class="form-group">
+                            <select name="department">
+                                <option value="12.06.2022">12 июля, вторник</option>
+                                <option value="11.06.2022">11 июля, вторник</option>
+                                <option value="10.06.2022">10 июля, вторник</option>
+                                <option value="9.06.2022">9 июля, вторник</option>
+                                <option value="8.06.2022">8 июля, вторник</option>
+                            </select>
+                        </div>
+                    </form>
+
+                    <div class="green-menu">
+                        <a href="#" data-modal-link="diet">Диета</a>
+                        <a href="#" class="active">ОВД</a>
+                    </div>
+                </div>
+
+                <div class="eat-history-block">
+                    <div class="category">
+                        <div class="name">Ужин</div>
+                    </div>
+                    <div class="eat-history-grid" data-eat-history-grid>
+                        <div class="item open" data-item>
+                            <div class="info">
+                                <div class="name">Каша овсяная с сухофруктами</div>
+                                <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                <div class="text" data-toggle>
+                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                    пассированная п/ф, томатная паста пассированная п/ф,
+                                    перец болгарский п/ф, соль, перец горошком
+                                    (смесь), лавровый лист, сахар песок, вода, зелень в асс.
+                                </div>
+                            </div>
+                            <div class="img">
+                                <img src="./img/eat-b1.jpg" alt="">
+                            </div>
+                            <div class="review">
+                                <form class="review-form">
+                                    <input type="hidden" name="rating" value="0">
+
+                                    <div class="form-group item-rating">
+                                        <div class="star" data-value="1"></div>
+                                        <div class="star" data-value="2"></div>
+                                        <div class="star" data-value="3"></div>
+                                        <div class="star" data-value="4"></div>
+                                        <div class="star" data-value="5"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <textarea name="text" placeholder="Введите любой комментарий к блюду"></textarea>
+                                    </div>
+                                    <div class="form-group item-actions">
+                                        <button type="submit">Отправить оценку</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="toggle" data-toggle>
+                                <a href="#">Оценить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="right">
+                <div class="order-block">
+                    <div class="block-title">Ваш заказ</div>
+                    <div class="info">
+                        Автоматический выбор блюд через: <span class="value">4 ч 15 м</span>
+                    </div>
+                    <div class="items">
+                        <div class="box">
+                            <div class="title">Завтрак</div>
+                            <div class="item">
+                                <div class="name">Каша овсяная с сухофруктами</div>
+                            </div>
+                            <div class="item">
+                                <div class="name">Яйцо варёное вкрутую</div>
+                                <div class="toggle">
+                                    <div class="i i-double-arrow"></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="name">Каша овсяная с сухофруктами</div>
+                                <div class="toggle">
+                                    <div class="i i-double-arrow"></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="name">Ассорти из свежих фруктов</div>
+                                <div class="toggle">
+                                    <div class="i i-double-arrow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="title">Обед</div>
+                            <div class="item">
+                                <div class="name">Суп куриный с вермишелью</div>
+                            </div>
+                            <div class="item">
+                                <div class="name">Котлета из трески на пару</div>
+                                <div class="toggle">
+                                    <div class="i i-double-arrow"></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="name">Пюре картофельное со сливочным маслом</div>
+                                <div class="toggle">
+                                    <div class="i i-double-arrow"></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="name">Салат из капусты с огурцом</div>
+                                <div class="toggle">
+                                    <div class="i i-double-arrow"></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="name">Компот из сухофруктов</div>
+                                <div class="toggle">
+                                    <div class="i i-double-arrow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="title">Полдник</div>
+                            <div class="item">
+                                <div class="name">Творог обезжиренный с ягодами</div>
+                            </div>
+                            <div class="item">
+                                <div class="name">Апельсиновый сок</div>
+                                <div class="toggle">
+                                    <div class="i i-double-arrow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="title">Ужин</div>
+                            <div class="item">
+                                <div class="name">Лосось запечённый</div>
+                                <div class="toggle">
+                                    <div class="i i-double-arrow"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <a href="#" class="button">Подтвердить заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div data-modal="profile-form" data-modal-width="480">
+            <div class="title">Редактировать профиль</div>
+            <form action="#">
+                <div class="form-group">
+                    <label for="#">E-mail</label>
+                    <input type="text" value="mail@example.com">
+                </div>
+                <div class="form-group item-actions flex flex-center">
+                    <button type="submit" data-modal-link="profile-edited">Сохранить</button>
+                    <a href="#" class="button white" data-modal-link="password-form">Изменить пароль</a>
+                </div>
+            </form>
+        </div>
+
+
+        <div data-modal="profile-edited" data-modal-width="400">
+            <div class="message-block">
+                <div class="icon">
+                    <div class="i i-ok"></div>
+                </div>
+                <div class="title">Email успешно изменён</div>
+            </div>
+        </div>
+
+
+        <div data-modal="password-form" data-modal-width="480">
+            <div class="title">Изменение пароля</div>
+            <form action="#" class="password-form">
+                <div class="form-group">
+                    <label for="#">Введите старый пароль</label>
+                    <input type="password" name="old_password">
+                </div>
+                <div class="form-group">
+                    <label for="#">Введите новый пароль</label>
+                    <input type="password" name="new_password">
+                </div>
+                <div class="form-group item-actions flex flex-center">
+                    <button type="submit">Сохранить</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div data-modal="logout" data-modal-width="400">
+            <div class="title align-center">Вы уверены, что хотите выйти?</div>
+            <div class="confirm-block">
+                <div class="buttons">
+                    <a href="#" class="button">Выйти</a>
+                    <a href="#" class="button white" data-modal-close>Отменить</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div data-modal="diet" data-modal-width="480">
+            <div class="title">Выберите диету из списка</div>
+            <form action="#">
+                <div class="form-group">
+                    <label for="#">Диета</label>
+                    <select name="diet">
+                        <option value="1">Диета 1</option>
+                        <option value="2">Диета 2</option>
+                        <option value="3">Диета 3</option>
+                        <option value="4">Диета 4</option>
+                    </select>
+                </div>
+                <div class="form-group item-actions flex flex-center">
+                    <button type="submit">Показать</button>
+                    <a href="#" class="button white" data-modal-close>Отменить</a>
+                </div>
+            </form>
+        </div>
+
+
+        <script src="./js/all.js"></script>
+    </body>
+</html>
