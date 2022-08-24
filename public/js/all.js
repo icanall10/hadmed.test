@@ -255,6 +255,30 @@
             });
 
 
+        $('.eat-menu-block .menu a')
+            .once('tabs')
+            .click(function (e) {
+                e.preventDefault();
+
+                let $this = $(this);
+
+                $this
+                    .closest('.menu')
+                    .find('a')
+                    .each(function () {
+                        let item = $(this);
+
+                        item.removeClass('active');
+
+                        $('[data-eat-menu-tab-content="' + item.attr('data-tab') + '"]').removeClass('active');
+                    });
+
+                $this.addClass('active');
+
+                $('[data-eat-menu-tab-content="' + $this.attr('data-tab') + '"]').addClass('active');
+            });
+
+
         $('[data-fade-toggle-link]')
             .once()
             .click(function (e) {

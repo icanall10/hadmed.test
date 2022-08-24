@@ -1002,6 +1002,9 @@ body .flatpickr-day.endRange.nextMonthDay {
   font-size: 16px;
   font-weight: 600;
 }
+[data-eat-menu-tab-content]:not(.active) {
+  display: none;
+}
 .eat-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1047,14 +1050,15 @@ body .flatpickr-day.endRange.nextMonthDay {
   gap: 20px;
 }
 .eat-grid-interactive .item {
-  border: 1px solid #0E7ABC;
-  background: #EEF1F8;
+  background-color: #fff;
+  border: 1px solid #EEF1F8;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+  transition: background-color 250ms ease, border-color 250ms ease;
 }
 .eat-grid-interactive .item .info {
   padding: 16px;
@@ -1139,6 +1143,7 @@ body .flatpickr-day.endRange.nextMonthDay {
   opacity: 0;
 }
 .eat-grid-interactive .item.active {
+  background-color: #EEF1F8;
   border-color: #0E7ABC;
 }
 .eat-grid-interactive .item.active .info .choose {
@@ -1147,5 +1152,32 @@ body .flatpickr-day.endRange.nextMonthDay {
 }
 .eat-grid-interactive .item:not(.active) .info .name {
   opacity: 0.3;
+}
+.eat-grid-interactive .item.open:not(.active) .info .text {
+  opacity: 0.8;
+}
+.eat-interactive-block .category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 30px 0;
+}
+.eat-interactive-block .category:first-child {
+  margin-top: 0;
+}
+.eat-interactive-block .category .name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-right: 16px;
+}
+.eat-interactive-block .category .info {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.166;
+  color: var(--color-main);
+  position: relative;
+  top: -2px;
 }
 
