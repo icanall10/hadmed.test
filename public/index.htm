@@ -27,7 +27,7 @@
                         <div class="info" data-fade-toggle="profile-info">
                             <div class="segment">
                                 <div class="name">В. Вайнштейн</div>
-                                <div class="email">mail@example.com</div>
+                                <div class="email">mail.mail.mail.mail@example.com</div>
                                 <div class="links">
                                     <a href="#" data-modal-link="logout">Выйти</a>
                                     <a href="#" data-modal-link="profile-form">Изменить</a>
@@ -724,17 +724,19 @@
         <div data-modal="patient-add" data-modal-width="480">
             <div class="title">Добавить нового пациента</div>
             <form action="#">
-                <div class="form-group">
+                <div class="form-group error">
                     <label for="#">ФИО пациента</label>
                     <input type="text" name="name" value="Смирнова Антонина Сергеевна">
+                    <div class="error">Поле может содержать только буквы и символы () -,').</div>
                 </div>
                 <div class="form-group">
                     <label for="#">Дата госпитализации</label>
                     <input type="text" name="date" value="12.07.2022" data-datepicker>
                 </div>
-                <div class="form-group">
+                <div class="form-group error">
                     <label for="#">Время госпитализации</label>
                     <input type="text" name="time" value="14:00" data-timemask>
+                    <div class="error">Поле может содержать только буквы и символы () -,').</div>
                 </div>
                 <div class="form-group">
                     <label for="#">Отделение</label>
@@ -791,9 +793,10 @@
                         <option value="10">10</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group error">
                     <label for="#">Комментарий</label>
                     <textarea name="comment">Аллергия на арахис, непереносимость лактозы, рекомендована мягкая и жидкая пища</textarea>
+                    <div class="error">Поле может содержать только буквы и символы () -,').</div>
                 </div>
                 <div class="form-group item-actions flex flex-center">
                     <button type="submit" data-modal-link="patient-added">Сохранить</button>
