@@ -1,0 +1,78 @@
+@media screen and (max-width: 1440px) {
+  .auth-layout {
+    grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
+  }
+}
+@media screen and (max-width: 960px) {
+  .auth-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 168px) minmax(0, 1fr);
+  }
+  .auth-layout .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .auth-layout .left .hadassah {
+    margin-bottom: 0;
+    margin-right: 64px;
+  }
+  .auth-layout .left .pertushka {
+    position: relative;
+    top: -3px;
+  }
+  .auth-layout .left img {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .auth-layout .right {
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 480px) {
+  .auth-layout {
+    background: #EEF1F8;
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+    grid-template-rows: minmax(0, 98px) minmax(0, 1fr) minmax(0, 112px);
+  }
+  .auth-layout .left {
+    padding: 0;
+  }
+  .auth-layout .left img {
+    width: 158px;
+  }
+  .auth-layout .left .hadassah {
+    margin-right: 0;
+  }
+  .auth-layout .left .pertushka {
+    display: none;
+  }
+  .auth-layout .right {
+    padding: 20px;
+    overflow: visible;
+    justify-content: center;
+  }
+  .auth-layout .right .segment {
+    background: #fff;
+  }
+  .auth-layout:after {
+    content: '';
+    display: block;
+    background-image: url(../img/petrushka.png);
+    background-size: 158px 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .segment {
+    padding: 24px 16px;
+  }
+  .register-form .item-actions {
+    justify-content: flex-start;
+  }
+}
+

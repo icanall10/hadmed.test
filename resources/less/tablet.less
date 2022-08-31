@@ -1,0 +1,119 @@
+//  1200 - 1440
+
+@media screen and (max-width: 1440px) {
+    .auth-layout {
+        grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
+    }
+}
+
+
+//  960 - 1200
+
+@media screen and (max-width: 1200px) {
+
+}
+
+
+//  640 - 960
+
+@media screen and (max-width: 960px) {
+    .auth-layout {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: minmax(0, 168px) minmax(0, 1fr);
+
+        .left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            box-sizing: border-box;
+
+            .hadassah {
+                margin-bottom: 0;
+                margin-right: 64px;
+            }
+
+            .pertushka {
+                position: relative;
+                top: -3px;
+            }
+
+            img {
+                width: 200px;
+            }
+        }
+    }
+}
+
+
+//  480 - 640
+
+@media screen and (max-width: 640px) {
+    .auth-layout {
+        .right {
+            justify-content: flex-start;
+        }
+    }
+}
+
+//  320 - 480
+
+@media screen and (max-width: 480px) {
+    .auth-layout {
+        background: #EEF1F8;
+
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+
+        grid-template-rows: minmax(0, 98px) minmax(0, 1fr) minmax(0, 112px);
+
+        .left {
+            padding: 0;
+
+            img {
+                width: 158px;
+            }
+
+            .hadassah {
+                margin-right: 0;
+            }
+
+            .pertushka {
+                display: none;
+            }
+        }
+
+        .right {
+            padding: 20px;
+            overflow: visible;
+
+            justify-content: center;
+
+            .segment {
+                background: #fff;
+            }
+        }
+
+        &:after {
+            content: '';
+            display: block;
+
+            background-image: url(../img/petrushka.png);
+            background-size: 158px 48px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .segment {
+        padding: 24px 16px;
+    }
+
+    .register-form {
+        .item-actions {
+            justify-content: flex-start;
+        }
+    }
+}
