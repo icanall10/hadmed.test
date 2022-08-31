@@ -18,6 +18,18 @@
   body.has-right #wrapper {
     grid-template-columns: minmax(0, 192px) minmax(0, 42%) minmax(0, 1fr);
   }
+  body.small-left #wrapper {
+    grid-template-columns: minmax(0, 80px) minmax(0, 1fr);
+  }
+  body.small-left #wrapper #left .sidebar .inner {
+    background: #EEF1F8;
+  }
+  body.has-right.small-left #wrapper {
+    grid-template-columns: minmax(0, 80px) minmax(0, 58%) minmax(0, 1fr);
+  }
+  body.has-right.small-left #wrapper #center {
+    margin-left: 0;
+  }
   .sidebar-header-block .logo {
     padding-left: 24px;
   }
@@ -34,16 +46,33 @@
   .eat-grid .item .info .name {
     font-size: 16px;
   }
+  .switch a {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-height: unset;
+  }
+  .green-menu a {
+    padding: 4px 12px;
+  }
+  .eat-choose-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 @media screen and (max-width: 1200px) {
   #wrapper {
     grid-template-columns: minmax(0, 48px) minmax(0, 1fr);
   }
   #wrapper #center {
-    padding-left: 0;
+    margin-left: 0;
   }
   body.has-right #wrapper {
     grid-template-columns: minmax(0, 48px) minmax(0, 51%) minmax(0, 1fr);
+  }
+  body.small-left #wrapper {
+    grid-template-columns: minmax(0, 80px) minmax(0, 1fr);
+  }
+  body.has-right.small-left #wrapper {
+    grid-template-columns: minmax(0, 80px) minmax(0, 51%) minmax(0, 1fr);
   }
   .sidebar-toggle-block {
     display: flex;
@@ -68,6 +97,47 @@
   }
   body:not(.sidebar-visible) .sidebar .sidebar-header-block .profile .info {
     display: none !important;
+  }
+  .eat-history-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .header-block .green-menu a {
+    font-size: 12px;
+  }
+  body.has-right .header-block {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, auto));
+    align-items: center;
+  }
+  body.has-right .header-block .menu-link {
+    display: block;
+  }
+  body.has-right .header-block .green-menu {
+    justify-content: flex-end;
+  }
+  body.has-right .header-block .menu {
+    grid-column: span 2;
+    grid-row-start: 2;
+    margin-top: 16px;
+  }
+  body.has-right .header-block .menu .switch {
+    width: 100%;
+  }
+  .eat-choose-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .eat-choose-grid .item .img {
+    height: 120px;
+  }
+  .table .tr.active {
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 961px) {
+  body.small-left .sidebar {
+    position: relative;
+    left: 0;
+    width: auto;
   }
 }
 @media screen and (max-width: 960px) {
@@ -98,6 +168,9 @@
   }
   body.has-right #wrapper #right {
     padding: 0;
+  }
+  body.has-right.small-left #wrapper {
+    grid-template-columns: 0 minmax(0, 1fr) 0;
   }
   .patient-card-block {
     position: fixed;
@@ -178,6 +251,114 @@
   .eat-grid .item > .img {
     display: none;
   }
+  .header-block {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+  .header-block .menu-link {
+    display: block;
+  }
+  .header-block .green-menu {
+    justify-content: flex-end;
+  }
+  .header-block .menu {
+    grid-column: span 2;
+    grid-row-start: 2;
+    margin-top: 16px;
+  }
+  .header-block .menu .switch {
+    width: 100%;
+  }
+  .eat-choose-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .order-toggle-block {
+    display: block;
+    height: 48px;
+  }
+  .order-toggle-block a {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--color-main);
+    background: #EEF1F8;
+    border-radius: 16px 16px 0 0;
+    height: 48px;
+  }
+  .order-toggle-block a .i {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    transform: rotate(-90deg);
+    position: relative;
+    top: -1px;
+  }
+  .order-block {
+    position: fixed;
+    z-index: 5;
+    top: 100vh;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    transition: right 200ms linear, top 200ms linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .order-block .overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #EEF1F8;
+    opacity: 0;
+    transition: opacity 200ms linear;
+  }
+  .order-block .content {
+    position: relative;
+    z-index: 2;
+    height: auto;
+    max-height: calc(100vh * 0.8);
+    background: #EEF1F8;
+  }
+  .order-block .content .inner {
+    overflow: auto;
+    height: 100%;
+    padding: 16px 20px;
+    box-sizing: border-box;
+  }
+  .order-block .content > .toggle {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: -24px;
+    bottom: auto;
+    width: auto;
+    height: 24px;
+  }
+  .order-block .content > .toggle .i {
+    transform: rotate(90deg);
+  }
+  body.order-visible .order-block {
+    top: 0;
+  }
+  body.order-visible .order-block .overlay {
+    opacity: 0.4;
+    height: 100vh;
+  }
 }
 @media screen and (max-width: 640px) {
   .auth-layout .right {
@@ -199,9 +380,6 @@
   }
   .mfp-container {
     padding: 0;
-  }
-  .table .tr.active {
-    border-radius: 0;
   }
   .patient-card-block {
     width: 100%;
@@ -234,22 +412,6 @@
   .menu-link .i {
     width: 24px;
     height: 24px;
-  }
-  .header-block {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: center;
-  }
-  .header-block .menu-link {
-    display: block;
-  }
-  .header-block .green-menu {
-    justify-content: flex-end;
-  }
-  .header-block .menu {
-    grid-column: span 2;
-    grid-row-start: 2;
-    margin-top: 16px;
   }
   .eat-menu-block {
     display: grid;
@@ -342,6 +504,9 @@
   }
   .header-block .title {
     font-size: 16px;
+  }
+  .header-block .menu {
+    display: none;
   }
   .header-block .button {
     text-indent: -9999px;

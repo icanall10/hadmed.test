@@ -233,7 +233,7 @@
                 let tr = $this.find('.tr');
 
                 if (is_mobile()) {
-                    tr.css('grid-template-columns', $this.attr('data-columns-tablet'));
+                    tr.css('grid-template-columns', $this.attr('data-columns-mobile'));
                 } else {
                     tr.css('grid-template-columns', $this.attr('data-columns'));
                 }
@@ -439,6 +439,13 @@
             .once()
             .click(function () {
                 $('body').toggleClass('patient-card-visible');
+            });
+
+
+        $('[data-order-toggle]')
+            .once()
+            .click(function () {
+                $('body').toggleClass('order-visible');
             });
 
     }
