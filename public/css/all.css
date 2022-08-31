@@ -2501,6 +2501,9 @@ body .flatpickr-day.endRange.nextMonthDay {
   .auth-layout .left img {
     width: 200px;
   }
+  #wrapper #center {
+    padding-top: 0;
+  }
   body.has-right #wrapper {
     grid-template-columns: minmax(0, 48px) minmax(0, 1fr) 0;
   }
@@ -2509,6 +2512,9 @@ body .flatpickr-day.endRange.nextMonthDay {
   }
   body.has-right.small-left #wrapper {
     grid-template-columns: 0 minmax(0, 1fr) 0;
+  }
+  body.small-left:not(.has-right) #wrapper {
+    grid-template-columns: 0 minmax(0, 1fr);
   }
   .patient-card-block {
     position: fixed;
@@ -2590,8 +2596,9 @@ body .flatpickr-day.endRange.nextMonthDay {
     display: none;
   }
   .header-block {
+    padding-top: 16px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, auto));
     align-items: center;
   }
   .header-block .menu-link {
@@ -2607,6 +2614,10 @@ body .flatpickr-day.endRange.nextMonthDay {
   }
   .header-block .menu .switch {
     width: 100%;
+  }
+  .header-block .date-form {
+    grid-row-start: 2;
+    margin-top: 8px;
   }
   .eat-choose-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2697,6 +2708,20 @@ body .flatpickr-day.endRange.nextMonthDay {
     opacity: 0.4;
     height: 100vh;
   }
+  .eat-history-block .category {
+    margin: 30px 0 20px;
+  }
+  .eat-history-block .category:first-child {
+    margin-top: 0;
+  }
+  .eat-history-grid .item .info .name {
+    font-size: 14px;
+  }
+  .review-form .item-actions button {
+    padding: 0 10px;
+    width: 100%;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 640px) {
   .auth-layout .right {
@@ -2761,6 +2786,9 @@ body .flatpickr-day.endRange.nextMonthDay {
   }
   .eat-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+  .eat-history-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media screen and (max-width: 480px) {
