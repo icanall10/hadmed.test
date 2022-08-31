@@ -410,6 +410,36 @@
                 );
             });
 
+
+        $('[data-sidebar-toggle]')
+            .once()
+            .click(function (e) {
+                e.preventDefault();
+
+                $('body').toggleClass('sidebar-visible');
+            });
+
+
+        $('.table .tr[data-patient-card-show]')
+            .once('patient-card-toggle')
+            .click(function () {
+                let $this = $(this);
+                let table = $this.closest('.table');
+
+                table.find('.tr').removeClass('active');
+
+                $this.addClass('active');
+
+                $('body').addClass('patient-card-visible');
+            });
+
+
+        $('[data-patient-card-toggle]')
+            .once()
+            .click(function () {
+                $('body').toggleClass('patient-card-visible');
+            });
+
     }
 
 

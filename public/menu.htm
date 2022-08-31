@@ -15,58 +15,71 @@
 
         <div id="wrapper">
             <div id="left">
-                <div class="sidebar-header-block">
-                    <a href="#" class="logo">
-                        <img src="./img/logo.svg" alt="">
-                    </a>
-                    <div class="profile">
-                        <a href="#" class="label" data-fade-toggle-link="profile-info">
-                            <span class="icon"></span>
-                            Профиль
-                        </a>
-                        <div class="info" data-fade-toggle="profile-info">
-                            <div class="segment">
-                                <div class="name">В. Вайнштейн</div>
-                                <div class="email">mail@example.com</div>
-                                <div class="links">
-                                    <a href="#" data-modal-link="logout">Выйти</a>
-                                    <a href="#" data-modal-link="profile-form">Изменить</a>
+                <div class="sidebar-toggle-block" data-sidebar-toggle>
+                    <div class="logo"></div>
+                    <div class="arrow">
+                        <div class="i i-arrow"></div>
+                    </div>
+                    <div class="petrushka"></div>
+                </div>
+
+                <div class="sidebar">
+                    <div class="overlay" data-sidebar-toggle></div>
+                    <div class="inner">
+                        <div class="sidebar-header-block">
+                            <a href="#" class="logo">
+                                <img src="./img/logo.svg" alt="">
+                            </a>
+                            <div class="profile">
+                                <a href="#" class="label" data-fade-toggle-link="profile-info">
+                                    <span class="icon"></span>
+                                    Профиль
+                                </a>
+                                <div class="info" data-fade-toggle="profile-info">
+                                    <div class="segment">
+                                        <div class="name">В. Вайнштейн</div>
+                                        <div class="email">mail.mail.mail.mail@example.com</div>
+                                        <div class="links">
+                                            <a href="#" data-modal-link="logout">Выйти</a>
+                                            <a href="#" data-modal-link="profile-form">Изменить</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="sidebar-menu-block">
+                            <ul>
+                                <li>
+                                    <a href="/">
+                                        <span class="i i-list icon-default"></span>
+                                        <span class="i i-list-colored icon-colored"></span>
+                                        <span>Пациенты</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="./menu.htm">
+                                        <span class="i i-eat icon-default"></span>
+                                        <span class="i i-eat-colored icon-colored"></span>
+                                        <span>Меню</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./archive.htm">
+                                        <span class="i i-box icon-default"></span>
+                                        <span class="i i-box-colored icon-colored"></span>
+                                        <span>Архив</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-petrushka-block">
+                            <a href="#">
+                                <img src="./img/petrushka.png" alt="">
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="sidebar-menu-block">
-                    <ul>
-                        <li>
-                            <a href="/">
-                                <span class="i i-list icon-default"></span>
-                                <span class="i i-list-colored icon-colored"></span>
-                                <span>Пациенты</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="./menu.htm">
-                                <span class="i i-eat icon-default"></span>
-                                <span class="i i-eat-colored icon-colored"></span>
-                                <span>Меню</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./archive.htm">
-                                <span class="i i-box icon-default"></span>
-                                <span class="i i-box-colored icon-colored"></span>
-                                <span>Архив</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-petrushka-block">
-                    <a href="#">
-                        <img src="./img/petrushka.png" alt="">
-                    </a>
                 </div>
             </div>
 

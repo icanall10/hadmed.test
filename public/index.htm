@@ -15,58 +15,71 @@
 
         <div id="wrapper">
             <div id="left">
-                <div class="sidebar-header-block">
-                    <a href="#" class="logo">
-                        <img src="./img/logo.svg" alt="">
-                    </a>
-                    <div class="profile">
-                        <a href="#" class="label" data-fade-toggle-link="profile-info">
-                            <span class="icon"></span>
-                            Профиль
-                        </a>
-                        <div class="info" data-fade-toggle="profile-info">
-                            <div class="segment">
-                                <div class="name">В. Вайнштейн</div>
-                                <div class="email">mail.mail.mail.mail@example.com</div>
-                                <div class="links">
-                                    <a href="#" data-modal-link="logout">Выйти</a>
-                                    <a href="#" data-modal-link="profile-form">Изменить</a>
+                <div class="sidebar-toggle-block" data-sidebar-toggle>
+                    <div class="logo"></div>
+                    <div class="arrow">
+                        <div class="i i-arrow"></div>
+                    </div>
+                    <div class="petrushka"></div>
+                </div>
+
+                <div class="sidebar">
+                    <div class="overlay" data-sidebar-toggle></div>
+                    <div class="inner">
+                        <div class="sidebar-header-block">
+                            <a href="#" class="logo">
+                                <img src="./img/logo.svg" alt="">
+                            </a>
+                            <div class="profile">
+                                <a href="#" class="label" data-fade-toggle-link="profile-info">
+                                    <span class="icon"></span>
+                                    Профиль
+                                </a>
+                                <div class="info" data-fade-toggle="profile-info">
+                                    <div class="segment">
+                                        <div class="name">В. Вайнштейн</div>
+                                        <div class="email">mail.mail.mail.mail@example.com</div>
+                                        <div class="links">
+                                            <a href="#" data-modal-link="logout">Выйти</a>
+                                            <a href="#" data-modal-link="profile-form">Изменить</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="sidebar-menu-block">
+                            <ul>
+                                <li class="active">
+                                    <a href="/">
+                                        <span class="i i-list icon-default"></span>
+                                        <span class="i i-list-colored icon-colored"></span>
+                                        <span>Пациенты</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./menu.htm">
+                                        <span class="i i-eat icon-default"></span>
+                                        <span class="i i-eat-colored icon-colored"></span>
+                                        <span>Меню</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./archive.htm">
+                                        <span class="i i-box icon-default"></span>
+                                        <span class="i i-box-colored icon-colored"></span>
+                                        <span>Архив</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-petrushka-block">
+                            <a href="#">
+                                <img src="./img/petrushka.png" alt="">
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="sidebar-menu-block">
-                    <ul>
-                        <li class="active">
-                            <a href="/">
-                                <span class="i i-list icon-default"></span>
-                                <span class="i i-list-colored icon-colored"></span>
-                                <span>Пациенты</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./menu.htm">
-                                <span class="i i-eat icon-default"></span>
-                                <span class="i i-eat-colored icon-colored"></span>
-                                <span>Меню</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./archive.htm">
-                                <span class="i i-box icon-default"></span>
-                                <span class="i i-box-colored icon-colored"></span>
-                                <span>Архив</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-petrushka-block">
-                    <a href="#">
-                        <img src="./img/petrushka.png" alt="">
-                    </a>
                 </div>
             </div>
 
@@ -83,7 +96,7 @@
                      data-columns="30% 20% 30% 1fr"
                      data-columns-tablet="30% 15% 30% 1fr"
                 >
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="th">
                             <a href="#" class="sort desc active">
                                 <span>фио пациента</span>
@@ -106,7 +119,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -118,7 +131,7 @@
                             <span class="tag blue">НКД</span>
                         </div>
                     </div>
-                    <div class="tr active">
+                    <div class="tr active" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -130,7 +143,7 @@
                             <span class="tag green">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -142,7 +155,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -154,7 +167,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -166,7 +179,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -178,7 +191,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -190,7 +203,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -202,7 +215,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -214,7 +227,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -226,7 +239,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -238,7 +251,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -250,7 +263,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -262,7 +275,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -274,7 +287,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -286,7 +299,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -298,7 +311,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -310,7 +323,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -322,7 +335,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -334,7 +347,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -346,7 +359,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -358,7 +371,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -370,7 +383,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -382,7 +395,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -394,7 +407,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -406,7 +419,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                     <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -423,221 +436,237 @@
 
             <div id="right" data-simplebar>
                 <div class="patient-card-block">
-                    <div class="block-title">Карточка пациента</div>
-                    <div class="tabs">
-                        <a href="#" class="active" data-tab="profile">Профиль</a>
-                        <a href="#" data-tab="eat">Выбранные блюда</a>
-                    </div>
-                    <div class="profile active" data-tab-content="profile">
-                        <div class="name">Смирнова Антонина Сергеевна</div>
-                        <div class="fields">
-                            <div class="field">
-                                <div class="label">Дата госпитализации</div>
-                                <div class="value">12.07.2022, 14:00</div>
+                    <div class="overlay" data-patient-card-toggle></div>
+                    <div class="toggle" data-patient-card-toggle></div>
+                    <div class="content">
+                        <div class="block-title">Карточка пациента</div>
+                        <div class="tabs">
+                            <a href="#" class="active" data-tab="profile">Профиль</a>
+                            <a href="#" data-tab="eat">Выбранные блюда</a>
+                        </div>
+                        <div class="profile active" data-tab-content="profile">
+                            <div class="name">Смирнова Антонина Сергеевна</div>
+                            <div class="fields">
+                                <div class="field">
+                                    <div class="label">Дата госпитализации</div>
+                                    <div class="value">12.07.2022, 14:00</div>
+                                </div>
+                                <div class="field">
+                                    <div class="label">Отделение</div>
+                                    <div class="value">Гастроэнтерология</div>
+                                </div>
+                                <div class="field">
+                                    <div class="label">Диета</div>
+                                    <div class="value">ОВД</div>
+                                </div>
+                                <div class="field">
+                                    <div class="label">Номер палаты</div>
+                                    <div class="value">307</div>
+                                </div>
                             </div>
-                            <div class="field">
-                                <div class="label">Отделение</div>
-                                <div class="value">Гастроэнтерология</div>
+                            <div class="help">
+                                Аллергия на арахис, непереносимость лактозы,
+                                рекомендована мягкая и жидкая пища
                             </div>
-                            <div class="field">
-                                <div class="label">Диета</div>
-                                <div class="value">ОВД</div>
-                            </div>
-                            <div class="field">
-                                <div class="label">Номер палаты</div>
-                                <div class="value">307</div>
+                            <div class="actions">
+                                <a href="#" class="button" data-modal-link="patient-edit">Редактировать</a>
+                                <a href="#" class="button white" data-modal-link="patient-archive">Архивировать</a>
                             </div>
                         </div>
-                        <div class="help">
-                            Аллергия на арахис, непереносимость лактозы,
-                            рекомендована мягкая и жидкая пища
-                        </div>
-                        <div class="actions">
-                            <a href="#" class="button" data-modal-link="patient-edit">Редактировать</a>
-                            <a href="#" class="button white" data-modal-link="patient-archive">Архивировать</a>
-                        </div>
-                    </div>
-                    <div class="eat" data-tab-content="eat">
-                        <div class="switch">
-                            <a href="#" class="active">Сегодня</a>
-                            <a href="#">Завтра</a>
-                            <a href="#">Послезавтра</a>
-                        </div>
-                        <div class="date">12 июля, вторник</div>
-                        <div class="boxes">
-                            <div class="box">
-                                <div class="title">Завтрак</div>
-                                <div class="products-list">
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                        <div class="eat" data-tab-content="eat">
+                            <div class="switch">
+                                <a href="#" class="active">Сегодня</a>
+                                <a href="#">Завтра</a>
+                                <a href="#">Послезавтра</a>
+                            </div>
+                            <div class="date">12 июля, вторник</div>
+                            <div class="boxes">
+                                <div class="box">
+                                    <div class="title">Завтрак</div>
+                                    <div class="products-list">
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="box">
-                                <div class="title">Обед</div>
-                                <div class="products-list">
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                <div class="box">
+                                    <div class="title">Обед</div>
+                                    <div class="products-list">
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="./img/eat.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="name">Рыба под маринадом</div>
-                                            <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
-                                            <div class="text">
-                                                Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский п/ф,
-                                                соль,
-                                                перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        <div class="item">
+                                            <div class="img">
+                                                <img src="./img/eat.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Рыба под маринадом</div>
+                                                <div class="value">К 1001.3, Б 31.1, Ж 62.4, У 78.9</div>
+                                                <div class="text">
+                                                    Минтай филе с/м, лук репчатый пассированный п/ф, морковь пассированная п/ф, томатная паста пассированная п/ф, перец болгарский
+                                                    п/ф,
+                                                    соль,
+                                                    перец горошком (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

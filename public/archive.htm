@@ -15,58 +15,71 @@
 
         <div id="wrapper">
             <div id="left">
-                <div class="sidebar-header-block">
-                    <a href="#" class="logo">
-                        <img src="./img/logo.svg" alt="">
-                    </a>
-                    <div class="profile">
-                        <a href="#" class="label" data-fade-toggle-link="profile-info">
-                            <span class="icon"></span>
-                            Профиль
-                        </a>
-                        <div class="info" data-fade-toggle="profile-info">
-                            <div class="segment">
-                                <div class="name">В. Вайнштейн</div>
-                                <div class="email">mail@example.com</div>
-                                <div class="links">
-                                    <a href="#" data-modal-link="logout">Выйти</a>
-                                    <a href="#" data-modal-link="profile-form">Изменить</a>
+                <div class="sidebar-toggle-block" data-sidebar-toggle>
+                    <div class="logo"></div>
+                    <div class="arrow">
+                        <div class="i i-arrow"></div>
+                    </div>
+                    <div class="petrushka"></div>
+                </div>
+
+                <div class="sidebar">
+                    <div class="overlay" data-sidebar-toggle></div>
+                    <div class="inner">
+                        <div class="sidebar-header-block">
+                            <a href="#" class="logo">
+                                <img src="./img/logo.svg" alt="">
+                            </a>
+                            <div class="profile">
+                                <a href="#" class="label" data-fade-toggle-link="profile-info">
+                                    <span class="icon"></span>
+                                    Профиль
+                                </a>
+                                <div class="info" data-fade-toggle="profile-info">
+                                    <div class="segment">
+                                        <div class="name">В. Вайнштейн</div>
+                                        <div class="email">mail.mail.mail.mail@example.com</div>
+                                        <div class="links">
+                                            <a href="#" data-modal-link="logout">Выйти</a>
+                                            <a href="#" data-modal-link="profile-form">Изменить</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="sidebar-menu-block">
+                            <ul>
+                                <li>
+                                    <a href="/">
+                                        <span class="i i-list icon-default"></span>
+                                        <span class="i i-list-colored icon-colored"></span>
+                                        <span>Пациенты</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./menu.htm">
+                                        <span class="i i-eat icon-default"></span>
+                                        <span class="i i-eat-colored icon-colored"></span>
+                                        <span>Меню</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="./archive.htm">
+                                        <span class="i i-box icon-default"></span>
+                                        <span class="i i-box-colored icon-colored"></span>
+                                        <span>Архив</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-petrushka-block">
+                            <a href="#">
+                                <img src="./img/petrushka.png" alt="">
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="sidebar-menu-block">
-                    <ul>
-                        <li>
-                            <a href="/">
-                                <span class="i i-list icon-default"></span>
-                                <span class="i i-list-colored icon-colored"></span>
-                                <span>Пациенты</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./menu.htm">
-                                <span class="i i-eat icon-default"></span>
-                                <span class="i i-eat-colored icon-colored"></span>
-                                <span>Меню</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="./archive.htm">
-                                <span class="i i-box icon-default"></span>
-                                <span class="i i-box-colored icon-colored"></span>
-                                <span>Архив</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-petrushka-block">
-                    <a href="#">
-                        <img src="./img/petrushka.png" alt="">
-                    </a>
                 </div>
             </div>
 
@@ -79,7 +92,7 @@
                      data-columns="30% 20% 30% 20%"
                      data-columns-tablet="30% 15% 30% 1fr"
                 >
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="th">
                             <a href="#" class="sort desc active">
                                 <span>фио пациента</span>
@@ -102,7 +115,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -122,7 +135,7 @@
                             <span class="tag green">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -132,7 +145,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -142,7 +155,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -152,7 +165,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -162,7 +175,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -172,7 +185,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name">Смирнова А.С</div>
                         </div>
@@ -182,7 +195,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -192,7 +205,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name">Смирнова А.С</div>
                         </div>
@@ -202,7 +215,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -212,7 +225,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name">Смирнова А.С</div>
                         </div>
@@ -222,7 +235,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -232,7 +245,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name">Смирнова А.С</div>
                         </div>
@@ -242,7 +255,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -252,7 +265,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name">Смирнова А.С</div>
                         </div>
@@ -262,7 +275,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -272,7 +285,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name">Смирнова А.С</div>
                         </div>
@@ -282,7 +295,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -292,7 +305,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name">Смирнова А.С</div>
                         </div>
@@ -302,7 +315,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -312,7 +325,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -322,7 +335,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -332,7 +345,7 @@
                             <span class="tag yellow">ЩД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name">Смирнова А.С</div>
                         </div>
@@ -342,7 +355,7 @@
                             <span class="tag purple">ВКД</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -352,7 +365,7 @@
                             <span class="tag mint">ОВД б/с</span>
                         </div>
                     </div>
-                    <div class="tr">
+                    <div class="tr" data-patient-card-show>
                         <div class="td">
                             <div class="name ellipsis">Смирнова А.С</div>
                         </div>
@@ -367,29 +380,33 @@
 
             <div id="right" data-simplebar>
                 <div class="patient-card-block">
-                    <div class="block-title">Карточка пациента</div>
-                    <div class="profile active" data-tab-content="profile">
-                        <div class="name">Смирнова Антонина Сергеевна</div>
-                        <div class="fields">
-                            <div class="field">
-                                <div class="label">Дата госпитализации</div>
-                                <div class="value">12.07.2022, 14:00</div>
+                    <div class="overlay" data-patient-card-toggle></div>
+                    <div class="toggle" data-patient-card-toggle></div>
+                    <div class="content">
+                        <div class="block-title">Карточка пациента</div>
+                        <div class="profile active" data-tab-content="profile">
+                            <div class="name">Смирнова Антонина Сергеевна</div>
+                            <div class="fields">
+                                <div class="field">
+                                    <div class="label">Дата госпитализации</div>
+                                    <div class="value">12.07.2022, 14:00</div>
+                                </div>
+                                <div class="field">
+                                    <div class="label">Отделение</div>
+                                    <div class="value">Гастроэнтерология</div>
+                                </div>
+                                <div class="field">
+                                    <div class="label">Диета</div>
+                                    <div class="value">ОВД</div>
+                                </div>
+                                <div class="field">
+                                    <div class="label">Номер палаты</div>
+                                    <div class="value">307</div>
+                                </div>
                             </div>
-                            <div class="field">
-                                <div class="label">Отделение</div>
-                                <div class="value">Гастроэнтерология</div>
+                            <div class="actions">
+                                <a href="#" class="button" data-modal-link="patient-restore">Восстановить учётную запись</a>
                             </div>
-                            <div class="field">
-                                <div class="label">Диета</div>
-                                <div class="value">ОВД</div>
-                            </div>
-                            <div class="field">
-                                <div class="label">Номер палаты</div>
-                                <div class="value">307</div>
-                            </div>
-                        </div>
-                        <div class="actions">
-                            <a href="#" class="button" data-modal-link="patient-restore">Восстановить учётную запись</a>
                         </div>
                     </div>
                 </div>
