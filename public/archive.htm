@@ -84,15 +84,36 @@
             </div>
 
             <div id="center" data-simplebar>
+                <div class="mobile-header-block">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <a href="#" class="menu-link" data-sidebar-toggle>
+                        <div class="i i-menu"></div>
+                    </a>
+                    <div class="petrushka">
+                        <a href="#">
+                            <img src="./img/petrushka.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
                 <div class="header-block">
-                    <div class="title">Архив учётных записей</div>
+                    <div class="menu-link-and-name">
+                        <a href="#" class="menu-link" data-sidebar-toggle>
+                            <div class="i i-menu"></div>
+                        </a>
+                        <div class="title">Архив учётных записей</div>
+                    </div>
                 </div>
 
                 <div class="table" 
                      data-columns="30% 20% 30% 20%"
                      data-columns-tablet="30% 15% 30% 1fr"
                 >
-                    <div class="tr" data-patient-card-show>
+                    <div class="tr thead" data-patient-card-show>
                         <div class="th">
                             <a href="#" class="sort desc active">
                                 <span>фио пациента</span>
@@ -381,8 +402,10 @@
             <div id="right" data-simplebar>
                 <div class="patient-card-block">
                     <div class="overlay" data-patient-card-toggle></div>
-                    <div class="toggle" data-patient-card-toggle></div>
                     <div class="content">
+                        <div class="toggle" data-patient-card-toggle>
+                            <div class="i i-arrow"></div>
+                        </div>
                         <div class="block-title">Карточка пациента</div>
                         <div class="profile active" data-tab-content="profile">
                             <div class="name">Смирнова Антонина Сергеевна</div>

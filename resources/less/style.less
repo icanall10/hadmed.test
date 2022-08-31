@@ -502,6 +502,7 @@ button,
     .inner {
         background: #fff;
         height: 100%;
+        padding: 24px 0;
 
         position: relative;
         z-index: 1;
@@ -553,6 +554,18 @@ button,
 
 
 .sidebar-header-block {
+    .close {
+        display: none;
+
+        padding: 10px 20px;
+        margin-bottom: 64px;
+
+        .i {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
     .logo {
         display: flex;
         justify-content: flex-start;
@@ -849,6 +862,17 @@ body.small-left {
     align-items: center;
     justify-content: space-between;
 
+    .menu-link-and-name {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .menu-link {
+        display: none;
+        margin-right: 16px;
+    }
+
     .title {
         font-size: 24px;
         font-weight: 800;
@@ -897,6 +921,10 @@ body.small-left {
             border-radius: 16px 0 0 16px;
         }
 
+        &.thead {
+            border-bottom: 2px solid #EEF1F8;
+        }
+
         .th {
             padding: 12px 16px 12px 0;
             font-size: 12px;
@@ -904,7 +932,6 @@ body.small-left {
             text-transform: uppercase;
             letter-spacing: 0.72px;
             color: #c9ced1;
-            border-bottom: 2px solid #EEF1F8;
             margin-bottom: 4px;
 
             a {
@@ -1206,6 +1233,10 @@ body.small-left {
         }
 
         .info {
+            .img {
+                display: none;
+            }
+
             .name {
                 font-size: 16px;
                 line-height: 1.33;
@@ -2036,4 +2067,8 @@ body {
     textarea {
         height: 76px;
     }
+}
+
+.day-switch-block {
+    display: none;
 }

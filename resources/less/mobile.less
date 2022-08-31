@@ -184,15 +184,24 @@
         bottom: 0;
         right: -480px;
 
-        background: #EEF1F8;
-        padding: 24px 24px 24px 48px;
-        box-sizing: border-box;
+        transition: right 200ms linear, top 200ms linear;
 
-        transition: right 200ms linear;
+        .content {
+            overflow: auto;
+            position: relative;
+            height: 100%;
+
+            background: #EEF1F8;
+            padding: 24px 24px 24px 48px;
+            box-sizing: border-box;
+        }
 
         .toggle {
             content: '';
-            display: block;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             position: absolute;
             top: 0;
@@ -201,9 +210,10 @@
 
             width: 32px;
 
-            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.29289 17.7071C7.90237 17.3166 7.90237 16.6834 8.29289 16.2929L12.5858 12L8.29289 7.70711C7.90237 7.31658 7.90237 6.68342 8.29289 6.29289C8.68342 5.90237 9.31658 5.90237 9.70711 6.29289L14 10.5858C14.781 11.3668 14.7811 12.6332 14 13.4142L9.70711 17.7071C9.31658 18.0976 8.68342 18.0976 8.29289 17.7071Z' fill='%230E7ABC'/%3E%3C/svg%3E%0A");
-            background-repeat: no-repeat;
-            background-position: center;
+            .i {
+                width: 24px;
+                height: 24px;
+            }
         }
 
         .overlay {
@@ -306,6 +316,10 @@
         max-width: calc(100vw - (24px * 2));
     }
 
+    .mfp-container {
+        padding: 0;
+    }
+
     .table {
         .tr {
             &.active {
@@ -341,13 +355,6 @@
             }
         }
 
-        .menu {
-            .i {
-                width: 24px;
-                height: 24px;
-            }
-        }
-
         .petrushka {
             position: relative;
             top: -1px;
@@ -360,10 +367,21 @@
         }
     }
 
+    .menu-link {
+        .i {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
     .header-block {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: center;
+
+        .menu-link {
+            display: block;
+        }
 
         .green-menu {
             justify-content: flex-end;
@@ -442,6 +460,13 @@
         }
     }
 
+    #wrapper {
+        #center {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
     .segment {
         padding: 24px 16px;
     }
@@ -450,5 +475,346 @@
         .item-actions {
             justify-content: flex-start;
         }
+    }
+
+    .sidebar {
+        .inner {
+            justify-content: flex-start;
+        }
+    }
+
+    .sidebar-header-block {
+        margin-bottom: 64px;
+
+        .close {
+            display: block;
+        }
+
+        .logo {
+            display: none;
+        }
+    }
+
+    .sidebar-petrushka-block {
+        display: none;
+    }
+
+    .mobile-header-block {
+        display: none;
+    }
+
+    .header-block {
+        box-sizing: border-box;
+        min-height: 48px;
+
+        background: #EEF1F8;
+        margin-bottom: 16px;
+
+        margin-left: -20px;
+        margin-right: -20px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            font-size: 16px;
+        }
+
+        .button {
+            text-indent: -9999px;
+            overflow: hidden;
+
+            padding: 0;
+            margin: 0;
+            width: 32px;
+            height: 32px;
+
+            .i {
+                margin: 0;
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .green-menu {
+            a {
+                font-size: 11px;
+                padding: 4px 12px;
+            }
+        }
+    }
+
+    .mfp-bg {
+        background: #FDFEFF !important;
+        opacity: 1 !important;
+    }
+
+    .mfp-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .mfp-content {
+        max-width: 100%;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .mfp-close-btn-in {
+        .mfp-close {
+            width: 20px;
+            height: 20px;
+
+            right: auto;
+            left: 20px;
+            top: 10px !important;
+
+            background-position: center;
+            background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.309165 9.23182L7.02668 2.31819C7.4389 1.89394 8.10724 1.89394 8.51946 2.31819C8.93168 2.74245 8.93168 3.4303 8.51946 3.85455L3.60389 8.91363H17.9444C18.5274 8.91363 19 9.40001 19 10C19 10.6 18.5274 11.0864 17.9444 11.0864H3.60389L8.51946 16.1454C8.93168 16.5697 8.93168 17.2576 8.51946 17.6818C8.10724 18.1061 7.4389 18.1061 7.02668 17.6818L0.309165 10.7682C-0.103055 10.3439 -0.103055 9.65607 0.309165 9.23182Z' fill='%230E7ABC'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    [data-modal] {
+        background: #FDFEFF;
+        padding: 40px 16px 16px;
+        border-radius: 0;
+        border: none;
+    }
+
+    form {
+        .item-actions.flex-center {
+            display: block;
+
+            button,
+            .button {
+                width: 100%;
+                margin-bottom: 8px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .table {
+        .tr {
+            &.active {
+                margin-left: -20px;
+                margin-right: -20px;
+
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            &.thead {
+                margin-left: -20px;
+                margin-right: -20px;
+
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .th {
+                padding-top: 4px;
+                padding-bottom: 4px;
+
+                font-size: 10px;
+            }
+
+            .td {
+                font-size: 12px;
+                padding: 12px 10px 12px 0;
+
+                .name {
+                    font-size: 12px;
+                }
+
+                .tag {
+                    font-size: 10px;
+                    padding: 2px 8px;
+                }
+            }
+        }
+    }
+
+    .patient-card-block {
+        display: flex;
+        width: auto;
+
+        top: 100vh;
+        height: 100vh;
+
+        right: 0;
+        left: 0;
+
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .content {
+            height: auto;
+            padding: 16px 20px;
+
+            .toggle {
+                left: 0;
+                right: 0;
+                top: -24px;
+                bottom: auto;
+
+                width: auto;
+                height: 24px;
+
+                .i {
+                    transform: rotate(90deg);
+                }
+            }
+
+            .profile {
+                .name {
+                    font-size: 16px;
+                }
+
+                .fields {
+                    margin-bottom: 16px;
+
+                    .field {
+                        .label {
+                            font-size: 12px;
+                        }
+
+                        .value {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .help {
+                    font-size: 12px;
+                }
+
+                .actions {
+                    .button {
+                        margin-right: 8px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    body.patient-card-visible {
+        .patient-card-block {
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .block-title {
+        font-size: 16px;
+        padding: 0;
+        margin-bottom: 16px;
+    }
+
+    button, .button {
+        &, &.white {
+            font-size: 14px;
+            padding: 6px 12px;
+            min-height: 26px;
+            font-weight: 500;
+        }
+
+        &.white {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+    }
+
+    .tabs {
+        a {
+            font-size: 10px;
+            padding: 8px 8px 8px 0;
+        }
+    }
+
+    .products-list {
+        .item {
+            display: block;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            & > .img {
+                display: none;
+            }
+
+            .info {
+                display: grid;
+                grid-template-columns: minmax(0, 64px) minmax(0, 1fr);
+                gap: 0 8px;
+
+                .img {
+                    display: block;
+                    height: 64px;
+
+                    grid-row: span 2;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .name {
+                    display: flex;
+                    align-items: flex-end;
+                }
+
+                .text {
+                    margin-top: 12px;
+                    font-size: 12px;
+                    grid-column: span 2;
+                }
+            }
+        }
+    }
+
+    .switch {
+        a {
+            font-size: 10px;
+            padding: 2px 12px;
+            font-weight: 500;
+
+            min-height: 30px;
+        }
+    }
+
+    .patient-card-block {
+        .eat {
+            .date {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    .day-switch-block {
+        display: block;
     }
 }
