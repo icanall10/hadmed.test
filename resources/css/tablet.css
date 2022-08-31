@@ -42,11 +42,11 @@
   #wrapper {
     grid-template-columns: minmax(0, 48px) minmax(0, 1fr);
   }
+  #wrapper #center {
+    padding-left: 0;
+  }
   body.has-right #wrapper {
     grid-template-columns: minmax(0, 48px) minmax(0, 51%) minmax(0, 1fr);
-  }
-  body:not(.has-right) #wrapper #center {
-    padding-left: 0;
   }
   .sidebar-toggle-block {
     display: flex;
@@ -144,10 +144,112 @@
     width: 100%;
     opacity: 0.3;
   }
+  .eat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .eat-grid .item .info {
+    padding: 12px;
+  }
+  .eat-grid .item .info .name-and-value {
+    display: grid;
+    grid-template-columns: minmax(0, 80px) minmax(0, 1fr);
+    gap: 0 8px;
+    margin-bottom: 8px;
+  }
+  .eat-grid .item .info .name-and-value .img {
+    display: block;
+    grid-row: span 2;
+    height: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .eat-grid .item .info .name-and-value .name {
+    display: flex;
+    align-items: flex-end;
+  }
+  .eat-grid .item .info .name-and-value .value {
+    margin: 0;
+  }
+  .eat-grid .item > .img {
+    display: none;
+  }
 }
 @media screen and (max-width: 640px) {
   .auth-layout .right {
     justify-content: flex-start;
+  }
+  #wrapper {
+    grid-template-columns: 0 minmax(0, 1fr);
+  }
+  #wrapper #center {
+    margin-left: 0;
+    padding-left: 24px;
+    padding-top: 0;
+  }
+  body.has-right #wrapper {
+    grid-template-columns: 0 minmax(0, 1fr) 0;
+  }
+  .mfp-content {
+    max-width: calc(100vw - (24px * 2));
+  }
+  .table .tr.active {
+    border-radius: 0;
+  }
+  .patient-card-block {
+    width: 100%;
+  }
+  .sidebar-toggle-block {
+    display: none;
+  }
+  .mobile-header-block {
+    background: #EEF1F8;
+    padding: 8px 24px;
+    margin: 0 -24px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile-header-block .logo img {
+    width: 118px;
+    height: 24px;
+    display: block;
+  }
+  .mobile-header-block .menu .i {
+    width: 24px;
+    height: 24px;
+  }
+  .mobile-header-block .petrushka {
+    position: relative;
+    top: -1px;
+  }
+  .mobile-header-block .petrushka img {
+    width: 112px;
+    height: 32px;
+    display: block;
+  }
+  .header-block {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+  .header-block .green-menu {
+    justify-content: flex-end;
+  }
+  .header-block .menu {
+    grid-column: span 2;
+    grid-row-start: 2;
+    margin-top: 16px;
+  }
+  .eat-menu-block {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .eat-menu-block .date {
+    grid-row-start: 1;
+    margin: 0 0 10px;
+  }
+  .eat-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 @media screen and (max-width: 480px) {

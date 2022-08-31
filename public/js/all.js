@@ -185,7 +185,8 @@
             .once()
             .flatpickr({
                 locale: 'ru',
-                dateFormat: 'd.m.Y'
+                dateFormat: 'd.m.Y',
+                disableMobile: "true"
             });
 
 

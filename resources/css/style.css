@@ -617,6 +617,9 @@ body.small-left .sidebar-petrushka-block a img {
   width: 112px;
   height: auto;
 }
+.mobile-header-block {
+  display: none;
+}
 .header-block {
   padding: 8px 0;
   margin-bottom: 24px;
@@ -1146,6 +1149,9 @@ body .flatpickr-day.endRange.nextMonthDay {
 .eat-grid .item .info {
   padding: 16px;
   box-sizing: border-box;
+}
+.eat-grid .item .info .name-and-value .img {
+  display: none;
 }
 .eat-grid .item .info .name {
   font-size: 20px;
