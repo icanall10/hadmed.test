@@ -126,8 +126,14 @@
         return $.isFunction(fn) ? elements.each(fn) : elements;
     }
 
+
 })(jQuery);
 (function ($) {
+
+    let is_tablet = function () {
+        return ($(window).width() > 960 && $(window).width() <= 1200);
+    }
+
 
     function behaviors() {
 
@@ -220,15 +226,20 @@
 
 
         $('.table')
-            .once('table', function () {
+            .once()
+            .on('table', function () {
                 let $this = $(this);
+                let tr = $this.find('.tr');
 
-                $this
-                    .find('.tr')
-                    .css('grid-template-columns', $this.attr('data-columns'));
+                if (is_tablet()) {
+                    tr.css('grid-template-columns', $this.attr('data-columns-tablet'));
+                } else {
+                    tr.css('grid-template-columns', $this.attr('data-columns'));
+                }
 
                 $this.show();
-            });
+            })
+            .trigger('table');
 
 
         $('.tabs a')
@@ -400,6 +411,11 @@
             });
 
     }
+
+
+    $(window).resize(function () {
+        $('.table').trigger('table');
+    });
 
 
     $(document).ready(function () {

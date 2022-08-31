@@ -20,4 +20,5 @@
         return $.isFunction(fn) ? elements.each(fn) : elements;
     }
 
+
 })(jQuery);

@@ -13,6 +13,16 @@ html {
     }
 }
 
+.only-desktop {
+    display: block;
+}
+.only-table {
+    display: none;
+}
+.only-mobile {
+    display: none;
+}
+
 #wrapper {
     display: grid;
     grid-template-columns: minmax(0, 224px) minmax(0, 1fr);
@@ -84,6 +94,16 @@ body {
 
 [data-fade-toggle] {
     display: none;
+}
+
+
+// ellipsis
+
+.ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -465,9 +485,9 @@ button,
 .sidebar-header-block {
     .logo {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
 
-        padding: 12px;
+        padding: 12px 0 12px 48px;
         margin-bottom: 72px;
 
         img {
@@ -485,7 +505,8 @@ button,
         .label {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            padding: 0 0 0 48px;
 
             font-size: 12px;
             color: #A7BBC7;
@@ -732,9 +753,8 @@ body.small-left {
 .sidebar-petrushka-block {
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    padding: 10px;
+    justify-content: flex-start;
+    padding: 10px 10px 10px 48px;
 
     img {
         display: block;
@@ -841,6 +861,12 @@ body.small-left {
                     &.active:after {
                         background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L12 6H0L6 0Z' fill='%230E7ABC'/%3E%3C/svg%3E%0A");
                     }
+                    
+                    span {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
                 }
             }
         }
@@ -858,6 +884,7 @@ body.small-left {
             }
 
             .tag {
+                white-space: nowrap;
                 display: inline-block;
                 vertical-align: middle;
                 padding: 4px 16px;
@@ -1445,7 +1472,7 @@ body {
         }
 
         .img {
-            max-height: 140px;
+            height: 140px;
 
             img {
                 display: block;

@@ -10,6 +10,15 @@ html body {
   min-width: 320px;
   cursor: default;
 }
+.only-desktop {
+  display: block;
+}
+.only-table {
+  display: none;
+}
+.only-mobile {
+  display: none;
+}
 #wrapper {
   display: grid;
   grid-template-columns: minmax(0, 224px) minmax(0, 1fr);
@@ -55,6 +64,12 @@ body.has-right.small-left #wrapper {
 }
 [data-fade-toggle] {
   display: none;
+}
+.ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .mfp-bg {
   background: #EEF1F8;
@@ -360,8 +375,8 @@ button .i,
 }
 .sidebar-header-block .logo {
   display: flex;
-  justify-content: center;
-  padding: 12px;
+  justify-content: flex-start;
+  padding: 12px 0 12px 48px;
   margin-bottom: 72px;
 }
 .sidebar-header-block .logo img {
@@ -376,7 +391,8 @@ button .i,
 .sidebar-header-block .profile .label {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 0 0 0 48px;
   font-size: 12px;
   color: #A7BBC7;
   font-weight: 600;
@@ -543,8 +559,8 @@ body.small-left .sidebar-petrushka-block a img {
 .sidebar-petrushka-block {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px;
+  justify-content: flex-start;
+  padding: 10px 10px 10px 48px;
 }
 .sidebar-petrushka-block img {
   display: block;
@@ -629,6 +645,11 @@ body.small-left .sidebar-petrushka-block a img {
 .table .tr .th a.sort.active:after {
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L12 6H0L6 0Z' fill='%230E7ABC'/%3E%3C/svg%3E%0A");
 }
+.table .tr .th a.sort span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .table .tr .td {
   padding: 16px 16px 16px 0;
   display: flex;
@@ -640,6 +661,7 @@ body.small-left .sidebar-petrushka-block a img {
   font-weight: 500;
 }
 .table .tr .td .tag {
+  white-space: nowrap;
   display: inline-block;
   vertical-align: middle;
   padding: 4px 16px;
@@ -1090,7 +1112,7 @@ body .flatpickr-day.endRange.nextMonthDay {
   font-weight: 500;
 }
 .eat-grid .item .img {
-  max-height: 140px;
+  height: 140px;
 }
 .eat-grid .item .img img {
   display: block;
