@@ -406,9 +406,6 @@
   .mfp-container {
     padding: 0;
   }
-  .patient-card-block {
-    width: 100%;
-  }
   .sidebar-toggle-block {
     display: none;
   }
@@ -449,8 +446,56 @@
   .eat-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+  .eat-choose-block .category {
+    display: block;
+  }
+  .eat-choose-block .category .info {
+    margin-top: 4px;
+    font-size: 12px;
+  }
   .eat-history-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .eat-history-grid .toggle a,
+  .eat-history-grid .reviewed a,
+  .eat-history-grid .toggle span,
+  .eat-history-grid .reviewed span {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 12px;
+  }
+  .eat-choose-grid .item {
+    flex-direction: column-reverse;
+  }
+  .eat-choose-grid .item .img {
+    height: 144px;
+  }
+  .eat-choose-grid .item .img img {
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .eat-choose-grid .item .info {
+    height: auto;
+    padding: 12px;
+  }
+  .eat-choose-grid .item .info .name {
+    font-size: 12px;
+  }
+  .eat-choose-grid .item .info .value {
+    font-size: 10px;
+  }
+  .eat-choose-grid .item .toggle {
+    bottom: 0;
+    top: 108px;
+  }
+  .eat-choose-grid .item .toggle a {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 12px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -553,6 +598,12 @@
     font-size: 11px;
     padding: 4px 12px;
   }
+  .header-block .date-form {
+    display: none;
+  }
+  .date-form-block {
+    display: block;
+  }
   .mfp-bg {
     background: #FDFEFF !important;
     opacity: 1 !important;
@@ -638,9 +689,16 @@
   }
   .patient-card-block .content {
     height: auto;
-    padding: 16px 20px;
+    position: relative;
+    padding: 0;
+    overflow: visible;
   }
-  .patient-card-block .content .toggle {
+  .patient-card-block .content .inner {
+    padding: 24px;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+  .patient-card-block .content .inner .toggle {
     left: 0;
     right: 0;
     top: -24px;
@@ -648,28 +706,28 @@
     width: auto;
     height: 24px;
   }
-  .patient-card-block .content .toggle .i {
+  .patient-card-block .content .inner .toggle .i {
     transform: rotate(90deg);
   }
-  .patient-card-block .content .profile .name {
+  .patient-card-block .content .inner .profile .name {
     font-size: 16px;
   }
-  .patient-card-block .content .profile .fields {
+  .patient-card-block .content .inner .profile .fields {
     margin-bottom: 16px;
   }
-  .patient-card-block .content .profile .fields .field .label {
+  .patient-card-block .content .inner .profile .fields .field .label {
     font-size: 12px;
   }
-  .patient-card-block .content .profile .fields .field .value {
+  .patient-card-block .content .inner .profile .fields .field .value {
     font-size: 14px;
   }
-  .patient-card-block .content .profile .help {
+  .patient-card-block .content .inner .profile .help {
     font-size: 12px;
   }
-  .patient-card-block .content .profile .actions .button {
+  .patient-card-block .content .inner .profile .actions .button {
     margin-right: 8px;
   }
-  .patient-card-block .content .profile .actions .button:last-child {
+  .patient-card-block .content .inner .profile .actions .button:last-child {
     margin-right: 0;
   }
   body.patient-card-visible .patient-card-block {
@@ -746,6 +804,39 @@
   }
   .day-switch-block {
     display: block;
+  }
+  .eat-history-grid .item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .eat-history-grid .item .img {
+    height: 114px;
+  }
+  .eat-history-grid .item .img img {
+    border-radius: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .eat-history-grid .item .info {
+    padding: 12px;
+    height: auto;
+  }
+  .eat-history-grid .item .toggle,
+  .eat-history-grid .item .reviewed {
+    bottom: auto;
+    left: 12px;
+    top: 80px;
+  }
+  .eat-history-grid .item .toggle span,
+  .eat-history-grid .item .reviewed span,
+  .eat-history-grid .item .toggle a,
+  .eat-history-grid .item .reviewed a {
+    font-size: 12px;
+    padding: 3px 12px;
+    font-weight: 500;
   }
 }
 
