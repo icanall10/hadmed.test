@@ -1,7 +1,7 @@
 (function ($) {
 
-    let is_tablet = function () {
-        return ($(window).width() > 960 && $(window).width() <= 1200);
+    let is_mobile = function () {
+        return ($(window).width() <= 1400);
     }
 
 
@@ -102,7 +102,7 @@
                 let $this = $(this);
                 let tr = $this.find('.tr');
 
-                if (is_tablet()) {
+                if (is_mobile()) {
                     tr.css('grid-template-columns', $this.attr('data-columns-tablet'));
                 } else {
                     tr.css('grid-template-columns', $this.attr('data-columns'));

@@ -12,7 +12,7 @@ mix
     .less('resources/less/fonts.less', 'resources/css/')
     .less('resources/less/icons.less', 'resources/css/')
     .less('resources/less/style.less', 'resources/css/')
-    .less('resources/less/tablet.less', 'resources/css/');
+    .less('resources/less/mobile.less', 'resources/css/');
 
 mix.styles([
     'resources/css/reset.css',
@@ -23,7 +23,7 @@ mix.styles([
     'resources/vendor/magnific-popup/magnific-popup.css',
     'resources/vendor/flatpickr/flatpickr.min.css',
     'resources/css/style.css',
-    'resources/css/tablet.css'
+    'resources/css/mobile.css'
 ], 'public/css/all.css');
 
 mix.scripts([

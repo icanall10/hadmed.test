@@ -773,9 +773,6 @@ html body {
 .only-desktop {
   display: block;
 }
-.only-table {
-  display: none;
-}
 .only-mobile {
   display: none;
 }
@@ -2290,11 +2287,8 @@ body .flatpickr-day.endRange.nextMonthDay {
   .only-desktop {
     display: none;
   }
-  .only-table {
-    display: block;
-  }
   .only-mobile {
-    display: none;
+    display: block;
   }
   .auth-layout {
     grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
