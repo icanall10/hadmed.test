@@ -41,7 +41,7 @@
                                 <div class="info" data-fade-toggle="profile-info">
                                     <div class="segment">
                                         <div class="name">В. Вайнштейн</div>
-                                        <div class="email">mail.mail.mail.mail@example.com</div>
+                                        <div class="email">mail@example.com</div>
                                         <div class="links">
                                             <a href="#" data-modal-link="logout">Выйти</a>
                                             <a href="#" data-modal-link="profile-form">Изменить</a>
@@ -86,374 +86,378 @@
                 </div>
             </div>
 
-            <div id="center" data-simplebar>
-                <div class="mobile-header-block">
-                    <div class="logo">
-                        <a href="#">
-                            <img src="./img/logo.svg" alt="">
-                        </a>
-                    </div>
-                    <a href="#" class="menu-link" data-sidebar-toggle>
-                        <div class="i i-menu"></div>
-                    </a>
-                    <div class="petrushka">
-                        <a href="#">
-                            <img src="./img/petrushka.png" alt="">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="header-block">
-                    <div class="menu-link-and-name">
+            <div id="center">
+                <div id="header">
+                    <div class="mobile-header-block">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="./img/logo.svg" alt="">
+                            </a>
+                        </div>
                         <a href="#" class="menu-link" data-sidebar-toggle>
                             <div class="i i-menu"></div>
                         </a>
-                        <div class="title">Ваши пациенты</div>
+                        <div class="petrushka">
+                            <a href="#">
+                                <img src="./img/petrushka.png" alt="">
+                            </a>
+                        </div>
                     </div>
 
-                    <a href="#" class="button" data-modal-link="patient-add">
-                        <span class="i i-plus"></span>
-                        Добавить
-                    </a>
+                    <div class="header-block">
+                        <div class="menu-link-and-name">
+                            <a href="#" class="menu-link" data-sidebar-toggle>
+                                <div class="i i-menu"></div>
+                            </a>
+                            <div class="title">Ваши пациенты</div>
+                        </div>
+
+                        <a href="#" class="button" data-modal-link="patient-add">
+                            <span class="i i-plus"></span>
+                            Добавить
+                        </a>
+                    </div>
                 </div>
 
-                <div class="table"
-                     data-columns="30% 20% 30% 1fr"
-                     data-columns-mobile="30% 15% 30% 1fr"
-                >
-                    <div class="tr thead" data-patient-card-show>
-                        <div class="th">
-                            <a href="#" class="sort desc active">
-                                <span>фио пациента</span>
-                            </a>
-                        </div>
-                        <div class="th">
-                            <a href="#" class="sort">
-                                <span class="only-desktop">палата</span>
-                                <span class="only-mobile">№</span>
-                            </a>
-                        </div>
-                        <div class="th">
-                            <a href="#" class="sort">
-                                <span>отделение</span>
-                            </a>
-                        </div>
-                        <div class="th">
-                            <a href="#" class="sort">
-                                <span>диета</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag blue">НКД</span>
-                        </div>
-                    </div>
-                    <div class="tr active" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag green">ЩД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag purple">ВКД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag mint">ОВД б/с</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag yellow">ЩД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag purple">ВКД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag mint">ОВД б/с</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag yellow">ЩД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag purple">ВКД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag mint">ОВД б/с</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag yellow">ЩД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag purple">ВКД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag mint">ОВД б/с</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag yellow">ЩД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag purple">ВКД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag mint">ОВД б/с</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag yellow">ЩД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag purple">ВКД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag mint">ОВД б/с</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag yellow">ЩД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag purple">ВКД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag mint">ОВД б/с</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag yellow">ЩД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag purple">ВКД</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag mint">ОВД б/с</span>
-                        </div>
-                    </div>
-                    <div class="tr" data-patient-card-show>
-                        <div class="td">
-                            <div class="name ellipsis">Смирнова А.С</div>
-                        </div>
-                        <div class="td">307</div>
-                        <div class="td">
-                            <div class="ellipsis">Гастроэнтерология</div>
-                        </div>
-                        <div class="td">
-                            <span class="tag yellow">ЩД</span>
+                <div id="content" data-simplebar>
+                    <div class="table"
+                         data-columns="30% 20% 30% 1fr"
+                         data-columns-mobile="37% 15% 33% 1fr"
+                    >
+                        <div class="tr thead" data-patient-card-show>
+                            <div class="th">
+                                <a href="#" class="sort desc active">
+                                    <span>фио пациента</span>
+                                </a>
+                            </div>
+                            <div class="th">
+                                <a href="#" class="sort">
+                                    <span class="only-desktop">палата</span>
+                                    <span class="only-mobile">№</span>
+                                </a>
+                            </div>
+                            <div class="th">
+                                <a href="#" class="sort">
+                                    <span>отделение</span>
+                                </a>
+                            </div>
+                            <div class="th">
+                                <a href="#" class="sort">
+                                    <span>диета</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag blue">НКД</span>
+                            </div>
+                        </div>
+                        <div class="tr active" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag green">ЩД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag purple">ВКД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag mint">ОВД б/с</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag yellow">ЩД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag purple">ВКД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag mint">ОВД б/с</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag yellow">ЩД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag purple">ВКД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag mint">ОВД б/с</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag yellow">ЩД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag purple">ВКД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag mint">ОВД б/с</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag yellow">ЩД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag purple">ВКД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag mint">ОВД б/с</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag yellow">ЩД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag purple">ВКД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag mint">ОВД б/с</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag yellow">ЩД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag purple">ВКД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag mint">ОВД б/с</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag yellow">ЩД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag purple">ВКД</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag mint">ОВД б/с</span>
+                            </div>
+                        </div>
+                        <div class="tr" data-patient-card-show>
+                            <div class="td">
+                                <div class="name ellipsis">Смирнова А.С</div>
+                            </div>
+                            <div class="td">307</div>
+                            <div class="td">
+                                <div class="ellipsis">Гастроэнтерология</div>
+                            </div>
+                            <div class="td">
+                                <span class="tag yellow">ЩД</span>
+                            </div>
                         </div>
                     </div>
                 </div>

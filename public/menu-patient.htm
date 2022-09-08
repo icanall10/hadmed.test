@@ -71,16 +71,31 @@
                 </div>
             </div>
 
-            <div id="center" data-simplebar>
-                <div class="header-block">
-                    <div class="menu-link-and-name">
-                        <a href="#" class="menu-link" data-sidebar-toggle>
-                            <div class="i i-menu"></div>
-                        </a>
-                        <div class="title">Меню</div>
+            <div id="center">
+                <div id="header">
+                    <div class="header-block">
+                        <div class="menu-link-and-name">
+                            <a href="#" class="menu-link" data-sidebar-toggle>
+                                <div class="i i-menu"></div>
+                            </a>
+                            <div class="title">Меню</div>
+                        </div>
+
+                        <div class="menu">
+                            <div class="switch">
+                                <a href="#" class="active">Сегодня</a>
+                                <a href="#">Завтра</a>
+                                <a href="#">Послезавтра</a>
+                            </div>
+                        </div>
+
+                        <div class="green-menu">
+                            <a href="#" data-modal-link="diet">Диета</a>
+                            <a href="#" class="active">ОВД</a>
+                        </div>
                     </div>
 
-                    <div class="menu">
+                    <div class="day-switch-block">
                         <div class="switch">
                             <a href="#" class="active">Сегодня</a>
                             <a href="#">Завтра</a>
@@ -88,361 +103,350 @@
                         </div>
                     </div>
 
-                    <div class="green-menu">
-                        <a href="#" data-modal-link="diet">Диета</a>
-                        <a href="#" class="active">ОВД</a>
+                    <div class="eat-menu-block">
+                        <div class="menu">
+                            <a href="#" class="active" data-tab="breakfast">Завтрак</a>
+                            <a href="#" data-tab="lunch">Обед</a>
+                            <a href="#" data-tab="afternoon-tea">Полдник</a>
+                            <a href="#" data-tab="dinner">Ужин</a>
+                        </div>
+                        <div class="date">12 июля, вторник</div>
                     </div>
                 </div>
 
-                <div class="day-switch-block">
-                    <div class="switch">
-                        <a href="#" class="active">Сегодня</a>
-                        <a href="#">Завтра</a>
-                        <a href="#">Послезавтра</a>
-                    </div>
-                </div>
-
-                <div class="eat-menu-block">
-                    <div class="menu">
-                        <a href="#" class="active" data-tab="breakfast">Завтрак</a>
-                        <a href="#" data-tab="lunch">Обед</a>
-                        <a href="#" data-tab="afternoon-tea">Полдник</a>
-                        <a href="#" data-tab="dinner">Ужин</a>
-                    </div>
-                    <div class="date">12 июля, вторник</div>
-                </div>
-
-                <div data-eat-menu-tab-content="breakfast" class="active">
-                    <div class="eat-choose-block">
-                        <div class="category">
-                            <div class="name">Первое блюдо</div>
-                            <div class="info">Это блюдо нельзя заменить</div>
-                        </div>
-                        <div class="eat-choose-grid" data-eat-choose-grid>
-                            <div class="item active" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Каша овсяная с сухофруктами</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
+                <div id="content" data-simplebar>
+                    <div data-eat-menu-tab-content="breakfast" class="active">
+                        <div class="eat-choose-block">
+                            <div class="category">
+                                <div class="name">Первое блюдо</div>
+                                <div class="info">Это блюдо нельзя заменить</div>
+                            </div>
+                            <div class="eat-choose-grid" data-eat-choose-grid>
+                                <div class="item active" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Каша овсяная с сухофруктами</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
+                                    <div class="img">
+                                        <img src="./img/eat-b1.jpg" alt="">
                                     </div>
-                                </div>
-                                <div class="img">
-                                    <img src="./img/eat-b1.jpg" alt="">
-                                </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="category">
-                            <div class="name">Основное блюдо</div>
-                            <div class="info">Выберите одно блюдо из категории</div>
-                        </div>
-                        <div class="eat-choose-grid" data-eat-choose-grid>
-                            <div class="item active" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Каша овсяная с сухофруктами</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
-                                    </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="img">
-                                    <img src="./img/eat-b1.jpg" alt="">
-                                </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
-                                </div>
+                            <div class="category">
+                                <div class="name">Основное блюдо</div>
+                                <div class="info">Выберите одно блюдо из категории</div>
                             </div>
-                            <div class="item" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Суп куриный с вермишелью</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
+                            <div class="eat-choose-grid" data-eat-choose-grid>
+                                <div class="item active" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Каша овсяная с сухофруктами</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
+                                    <div class="img">
+                                        <img src="./img/eat-b1.jpg" alt="">
                                     </div>
-                                </div>
-                                <div class="img">
-                                    <img src="./img/eat-b2.jpg" alt="">
-                                </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
-                                </div>
-                            </div>
-                            <div class="item" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Суп куриный с вермишелью</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
-                                    </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
                                     </div>
                                 </div>
-                                <div class="img">
-                                    <img src="./img/eat-b1.jpg" alt="">
+                                <div class="item" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Суп куриный с вермишелью</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/eat-b2.jpg" alt="">
+                                    </div>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
+                                    </div>
                                 </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
+                                <div class="item" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Суп куриный с вермишелью</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/eat-b1.jpg" alt="">
+                                    </div>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div data-eat-menu-tab-content="lunch">
-                    <div class="eat-choose-block">
-                        <div class="category">
-                            <div class="name">Основное блюдо</div>
-                            <div class="info">Выберите одно блюдо из категории</div>
-                        </div>
-                        <div class="eat-choose-grid" data-eat-choose-grid>
-                            <div class="item active" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Каша овсяная с сухофруктами</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
+                    <div data-eat-menu-tab-content="lunch">
+                        <div class="eat-choose-block">
+                            <div class="category">
+                                <div class="name">Основное блюдо</div>
+                                <div class="info">Выберите одно блюдо из категории</div>
+                            </div>
+                            <div class="eat-choose-grid" data-eat-choose-grid>
+                                <div class="item active" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Каша овсяная с сухофруктами</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
+                                    <div class="img">
+                                        <img src="./img/eat-b1.jpg" alt="">
+                                    </div>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
                                     </div>
                                 </div>
-                                <div class="img">
-                                    <img src="./img/eat-b1.jpg" alt="">
-                                </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
+                                <div class="item" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Суп куриный с вермишелью</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/eat-b1.jpg" alt="">
+                                    </div>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="item" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Суп куриный с вермишелью</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
-                                    </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="img">
-                                    <img src="./img/eat-b1.jpg" alt="">
-                                </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
-                                </div>
+                            <div class="category">
+                                <div class="name">Первое блюдо</div>
+                                <div class="info">Это блюдо нельзя заменить</div>
                             </div>
-                        </div>
-                        <div class="category">
-                            <div class="name">Первое блюдо</div>
-                            <div class="info">Это блюдо нельзя заменить</div>
-                        </div>
-                        <div class="eat-choose-grid" data-eat-choose-grid>
-                            <div class="item active" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Брокколи под сливочным соусом</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
+                            <div class="eat-choose-grid" data-eat-choose-grid>
+                                <div class="item active" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Брокколи под сливочным соусом</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
+                                    <div class="img">
+                                        <img src="./img/eat-b1.jpg" alt="">
                                     </div>
-                                </div>
-                                <div class="img">
-                                    <img src="./img/eat-b1.jpg" alt="">
-                                </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div data-eat-menu-tab-content="afternoon-tea">
-                    <div class="eat-choose-block">
-                        <div class="category">
-                            <div class="name">Гарнир</div>
-                            <div class="info">Это блюдо нельзя заменить</div>
-                        </div>
-                        <div class="eat-choose-grid" data-eat-choose-grid>
-                            <div class="item active" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Лосось запечённый</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
+                    <div data-eat-menu-tab-content="afternoon-tea">
+                        <div class="eat-choose-block">
+                            <div class="category">
+                                <div class="name">Гарнир</div>
+                                <div class="info">Это блюдо нельзя заменить</div>
+                            </div>
+                            <div class="eat-choose-grid" data-eat-choose-grid>
+                                <div class="item active" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Лосось запечённый</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
+                                    <div class="img">
+                                        <img src="./img/eat-b1.jpg" alt="">
                                     </div>
-                                </div>
-                                <div class="img">
-                                    <img src="./img/eat-b1.jpg" alt="">
-                                </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="category">
-                            <div class="name">Основное блюдо</div>
-                            <div class="info">Выберите одно блюдо из категории</div>
-                        </div>
-                        <div class="eat-choose-grid" data-eat-choose-grid>
-                            <div class="item active" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Каша овсяная с сухофруктами</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
-                                    </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="img">
-                                    <img src="./img/eat-b1.jpg" alt="">
-                                </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
-                                </div>
+                            <div class="category">
+                                <div class="name">Основное блюдо</div>
+                                <div class="info">Выберите одно блюдо из категории</div>
                             </div>
-                            <div class="item" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Суп куриный с вермишелью 2</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
+                            <div class="eat-choose-grid" data-eat-choose-grid>
+                                <div class="item active" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Каша овсяная с сухофруктами</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
+                                    <div class="img">
+                                        <img src="./img/eat-b1.jpg" alt="">
+                                    </div>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
                                     </div>
                                 </div>
-                                <div class="img">
-                                    <img src="./img/eat-b1.jpg" alt="">
-                                </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
+                                <div class="item" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Суп куриный с вермишелью 2</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/eat-b1.jpg" alt="">
+                                    </div>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div data-eat-menu-tab-content="dinner">
-                    <div class="eat-choose-block">
-                        <div class="category">
-                            <div class="name">Творог обезжиренный с ягодами</div>
-                            <div class="info">Это блюдо нельзя заменить</div>
-                        </div>
-                        <div class="eat-choose-grid" data-eat-choose-grid>
-                            <div class="item active" data-item>
-                                <div class="info">
-                                    <div class="name" data-choose>Каша овсяная с сухофруктами</div>
-                                    <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
-                                    <div class="text" data-toggle>
-                                        Минтай филе с/м, лук репчатый пассированный п/ф, морковь
-                                        пассированная п/ф, томатная паста пассированная п/ф,
-                                        перец болгарский п/ф, соль, перец горошком
-                                        (смесь), лавровый лист, сахар песок, вода, зелень в асс.
+                    <div data-eat-menu-tab-content="dinner">
+                        <div class="eat-choose-block">
+                            <div class="category">
+                                <div class="name">Творог обезжиренный с ягодами</div>
+                                <div class="info">Это блюдо нельзя заменить</div>
+                            </div>
+                            <div class="eat-choose-grid" data-eat-choose-grid>
+                                <div class="item active" data-item>
+                                    <div class="info">
+                                        <div class="name" data-choose>Каша овсяная с сухофруктами</div>
+                                        <div class="value">Б 73, Ж 35, У 15, Ккал 140</div>
+                                        <div class="text" data-toggle>
+                                            Минтай филе с/м, лук репчатый пассированный п/ф, морковь
+                                            пассированная п/ф, томатная паста пассированная п/ф,
+                                            перец болгарский п/ф, соль, перец горошком
+                                            (смесь), лавровый лист, сахар песок, вода, зелень в асс
+                                        </div>
+                                        <div class="choose" data-choose>
+                                            <a href="#">
+                                                Уже выбрано блюдо из этой категории.
+                                                Нажмите, чтобы заменить его.
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="choose" data-choose>
-                                        <a href="#">
-                                            Уже выбрано блюдо из этой категории.
-                                            Нажмите, чтобы заменить его.
-                                        </a>
+                                    <div class="img">
+                                        <img src="./img/eat-b1.jpg" alt="">
                                     </div>
-                                </div>
-                                <div class="img">
-                                    <img src="./img/eat-b1.jpg" alt="">
-                                </div>
-                                <div class="toggle" data-toggle>
-                                    <a href="#">Состав</a>
+                                    <div class="toggle" data-toggle>
+                                        <a href="#">Состав</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="order-toggle-block">
-                    <a href="#" data-order-toggle>
-                        <span class="i i-arrow"></span>
-                        <span>Ваш заказ</span>
-                    </a>
+                    <div class="order-toggle-block">
+                        <a href="#" data-order-toggle>
+                            <span class="i i-arrow"></span>
+                            <span>Ваш заказ</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 

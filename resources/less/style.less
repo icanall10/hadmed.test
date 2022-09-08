@@ -30,13 +30,35 @@ html {
     }
 
     #center {
-        overflow: auto;
-        overflow-x: hidden;
-        padding: 24px;
+        padding: 24px 0 0;
         box-sizing: border-box;
         margin-left: 24px;
 
         height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+
+        &[data-simplebar] {
+            overflow: auto;
+            overflow-x: hidden;
+        }
+
+        #header {
+            padding: 0 24px;
+        }
+
+        #content {
+            height: 100%;
+            min-height: 0;
+
+            padding: 0 24px 24px;
+
+            &[data-simplebar] {
+                overflow: auto;
+                overflow-x: hidden;
+            }
+        }
     }
 
     #right {
@@ -144,7 +166,8 @@ body {
 }
 
 .mfp-fade.mfp-bg.mfp-ready {
-    opacity: 0.8;
+    background: #C9CED1;
+    opacity: 0.5;
 }
 
 .mfp-fade.mfp-bg.mfp-removing {
@@ -308,7 +331,7 @@ a {
         font-family: 'Montserrat', Arial, sans-serif;
         font-size: 16px;
         font-weight: 500;
-        background: #fff;
+        background: #FDFEFF;
         margin: 0;
         padding: 0 12px;
         box-sizing: border-box;
@@ -393,7 +416,7 @@ button,
     border: none;
     font-size: 16px;
     font-weight: 600;
-    color: #ffffff;
+    color: #FDFEFF;
     cursor: pointer;
     line-height: 1.35;
 
@@ -401,9 +424,15 @@ button,
     align-items: center;
     justify-content: center;
 
+    transition: background 150ms linear;
+
+    &:hover {
+        background: #11669A;
+    }
+
     &.white {
         border: 2px solid var(--color-main);
-        background: #fff;
+        background: transparent;
         color: var(--color-main);
         position: relative;
     }
@@ -628,7 +657,7 @@ button,
             left: 24px;
             top: 100%;
             margin-top: 16px;
-            min-width: 200px;
+            min-width: 224px;
 
             .segment {
                 background: #fff;
@@ -642,13 +671,14 @@ button,
             }
 
             .email {
-                color: #A7BBC7;
+                color: #C9CED1;
                 margin-bottom: 4px;
             }
 
             .links {
                 display: flex;
                 flex-wrap: wrap;
+                margin-top: 10px;
 
                 a {
                     color: #C9CED1;
@@ -657,6 +687,7 @@ button,
                     text-transform: uppercase;
                     text-decoration: none;
                     line-height: 1.33;
+                    letter-spacing: 0.72px;
 
                     margin-right: 16px;
 
@@ -912,7 +943,7 @@ button,
 
         a {
             color: #A7BBC7;
-            font-size: 14px;
+            font-size: 12px;
             line-height: 1.71;
             text-transform: uppercase;
             font-weight: 600;
@@ -942,7 +973,16 @@ button,
             border-radius: 16px 0 0 16px;
         }
 
+        &.thead + .tr.active {
+            border-radius: 0 0 0 16px;
+        }
+
         &.thead {
+            margin-left: -24px;
+            margin-right: -24px;
+            padding-left: 24px;
+            padding-right: 24px;
+
             border-bottom: 2px solid #EEF1F8;
         }
 
@@ -953,7 +993,6 @@ button,
             text-transform: uppercase;
             letter-spacing: 0.72px;
             color: #c9ced1;
-            margin-bottom: 4px;
 
             a {
                 display: flex;
@@ -1003,7 +1042,6 @@ button,
 
             .name {
                 font-size: 16px;
-                font-weight: 500;
             }
 
             .tag {
@@ -1292,6 +1330,7 @@ body {
         border-radius: 16px;
         box-shadow: none;
         overflow: hidden;
+        padding-bottom: 8px;
 
         .flatpickr-months {
             position: relative;
@@ -1320,6 +1359,26 @@ body {
         background: var(--color-main);
         border-color: var(--color-main);
     }
+
+    .flatpickr-months .flatpickr-prev-month,
+    .flatpickr-months .flatpickr-next-month {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L6 4.58579L10.2929 0.292893C10.6834 -0.0976311 11.3166 -0.0976311 11.7071 0.292893C12.0976 0.683417 12.0976 1.31658 11.7071 1.70711L7.41421 6C6.63317 6.78105 5.36684 6.78105 4.58579 6L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z' fill='%230E7ABC'/%3E%3C/svg%3E%0A");
+
+        width: 20px;
+        height: 20px;
+
+        transform: rotate(90deg);
+
+        &.flatpickr-next-month {
+            transform: rotate(-90deg);
+        }
+
+        svg {
+            display: none;
+        }
+    }
 }
 
 
@@ -1334,7 +1393,7 @@ body {
     .select2-selection {
         font-size: 16px;
         font-weight: 500;
-        background: #fff;
+        background: #FDFEFF;
         box-sizing: border-box;
         height: 36px;
         border: 1px solid var(--color-main);
@@ -1387,12 +1446,10 @@ body {
             top: 0 !important;
             left: 0 !important;
 
-            margin-top: 3px;
-
-            box-shadow: 0 0 3px 0 rgba(17, 102, 154, 0.3);
+            margin-top: 8px;
 
             background: #EEF1F8;
-            padding: 0 16px 0 20px;
+            padding: 0 4px 0 20px;
             width: 100%;
             border-radius: 8px;
             box-sizing: border-box;
@@ -1448,7 +1505,6 @@ body {
         }
     }
 }
-
 
 
 .message-block {
@@ -1513,7 +1569,7 @@ body {
     align-items: center;
     box-sizing: border-box;
 
-    margin-bottom: 24px;
+    margin-bottom: 34px;
 
     border-bottom: 2px solid #EEF1F8;
 
@@ -1529,6 +1585,7 @@ body {
             padding: 4px 0;
             text-transform: uppercase;
             position: relative;
+            letter-spacing: 0.72px;
 
             margin-right: 16px;
 
@@ -1588,7 +1645,7 @@ body {
             }
 
             .name {
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 600;
                 line-height: 1.33;
                 margin-bottom: 4px;
@@ -1603,7 +1660,6 @@ body {
             .text {
                 font-size: 12px;
                 color: #a7bbc7;
-                font-weight: 500;
             }
         }
 
@@ -1697,7 +1753,7 @@ body {
 
             .value {
                 color: #a7bbc7;
-                font-size: 13px;
+                font-size: 12px;
             }
 
             .text {
@@ -1708,7 +1764,7 @@ body {
                 top: 100%;
                 left: 0;
                 right: 0;
-                padding: 0 16px;
+                padding: 0 16px 12px;
                 font-weight: 500;
 
                 opacity: 0;
@@ -1901,6 +1957,19 @@ body {
 .date-form {
     width: 306px;
     max-width: 100%;
+
+    .select2 {
+        .select2-selection {
+            height: 32px;
+
+            .select2-selection__rendered {
+                line-height: 30px;
+            }
+            .select2-selection__arrow {
+                height: 29px;
+            }
+        }
+    }
 }
 
 
@@ -2102,7 +2171,7 @@ body {
 }
 
 .order-toggle-block {
-    display: block;
+    display: none;
 }
 
 

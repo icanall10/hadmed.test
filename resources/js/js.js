@@ -1,7 +1,7 @@
 (function ($) {
 
     let is_mobile = function () {
-        return ($(window).width() <= 1400);
+        return ($(window).width() <= 1440);
     }
 
 
@@ -81,11 +81,22 @@
         $('.form-group select')
             .once()
             .on('select2:open', function (e) {
-                setTimeout(function () {
-                    $('.select2-results__options').each(function () {
-                        new SimpleBar(this)
-                    });
-                }, 10);
+                setTimeout(() => {
+                    $('.select2-results__options')
+                        .once()
+                        .niceScroll({
+                            cursorcolor: "#0E7ABC",
+                            cursorwidth: '4px',
+                            railpadding: {
+                                top: 4,
+                                right: 0,
+                                left: 0,
+                                bottom: 4
+                            },
+                            cursoropacitymin: 0.2,
+                            cursoropacitymax: 0.6
+                        });
+                }, 0);
             })
             .each(function () {
                 let $this = $(this);
@@ -319,6 +330,21 @@
             });
 
     }
+
+
+    $(document).click(function (event) {
+        let selector = '[data-fade-toggle]';
+        let $target = $(event.target);
+
+        if (
+            !$target.closest(selector).length &&
+            $(selector).is(':visible') &&
+            !$target.closest('[data-fade-toggle-link]').length &&
+            !$target.filter('[data-fade-toggle-link]').length
+        ) {
+            $(selector).fadeOut('fast');
+        }
+    });
 
 
     $(window).resize(function () {
