@@ -1666,6 +1666,12 @@ body {
         .img {
             height: 140px;
 
+            background-size: auto 48%;
+            background-repeat: no-repeat;
+            background-color: #A7BBC7;
+            background-position: center;
+            background-image: url("data:image/svg+xml,%3Csvg width='120' height='90' viewBox='0 0 120 90' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M108 4.5H12C7.85786 4.5 4.5 7.85786 4.5 12V78C4.5 82.1421 7.85787 85.5 12 85.5H108C112.142 85.5 115.5 82.1421 115.5 78V12C115.5 7.85787 112.142 4.5 108 4.5ZM12 0C5.37258 0 0 5.37258 0 12V78C0 84.6274 5.37259 90 12 90H108C114.627 90 120 84.6274 120 78V12C120 5.37258 114.627 0 108 0H12Z' fill='%23FBFCF7'/%3E%3Cpath d='M29.891 47.0907L0 70.875V74C0 82.8366 7.16344 90 16 90H104C112.837 90 120 82.8366 120 74V65.25L94.4992 31.8561C91.4103 27.8111 85.3793 27.6408 82.067 31.5051L62.0224 54.8905C59.2199 58.1601 54.332 58.6247 50.9638 55.9415L39.8568 47.0935C36.9412 44.7709 32.8079 44.7698 29.891 47.0907Z' fill='%23FBFCF7'/%3E%3Ccircle cx='27' cy='27' r='12' fill='%23FBFCF7'/%3E%3C/svg%3E%0A");
+
             img {
                 display: block;
                 width: 100%;
@@ -1795,11 +1801,20 @@ body {
             position: relative;
             transition: opacity 250ms ease;
 
+            min-height: 140px;
+            height: 140px;
+
+            background-size: auto 48%;
+            background-repeat: no-repeat;
+            background-color: #A7BBC7;
+            background-position: center;
+            background-image: url("data:image/svg+xml,%3Csvg width='120' height='90' viewBox='0 0 120 90' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M108 4.5H12C7.85786 4.5 4.5 7.85786 4.5 12V78C4.5 82.1421 7.85787 85.5 12 85.5H108C112.142 85.5 115.5 82.1421 115.5 78V12C115.5 7.85787 112.142 4.5 108 4.5ZM12 0C5.37258 0 0 5.37258 0 12V78C0 84.6274 5.37259 90 12 90H108C114.627 90 120 84.6274 120 78V12C120 5.37258 114.627 0 108 0H12Z' fill='%23FBFCF7'/%3E%3Cpath d='M29.891 47.0907L0 70.875V74C0 82.8366 7.16344 90 16 90H104C112.837 90 120 82.8366 120 74V65.25L94.4992 31.8561C91.4103 27.8111 85.3793 27.6408 82.067 31.5051L62.0224 54.8905C59.2199 58.1601 54.332 58.6247 50.9638 55.9415L39.8568 47.0935C36.9412 44.7709 32.8079 44.7698 29.891 47.0907Z' fill='%23FBFCF7'/%3E%3Ccircle cx='27' cy='27' r='12' fill='%23FBFCF7'/%3E%3C/svg%3E%0A");
+
             img {
                 display: block;
                 width: 100%;
-                height: auto;
-                border-radius: 0 0 16px 16px;
+                height: 100%;
+                object-fit: cover;
             }
         }
 
