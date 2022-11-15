@@ -54,17 +54,14 @@
         $('[data-datepicker]')
             .once()
             .flatpickr({
-                locale: 'ru',
-                dateFormat: 'd.m.Y',
-                disableMobile: "true"
+                locale: 'ru', dateFormat: 'd.m.Y', disableMobile: "true"
             });
 
 
         $('[data-timemask]')
             .once(function () {
                 new Cleave(this, {
-                    time: true,
-                    timePattern: ['h', 'm']
+                    time: true, timePattern: ['h', 'm']
                 });
             });
 
@@ -85,16 +82,9 @@
                     $('.select2-results__options')
                         .once()
                         .niceScroll({
-                            cursorcolor: "#0E7ABC",
-                            cursorwidth: '4px',
-                            railpadding: {
-                                top: 4,
-                                right: 0,
-                                left: 0,
-                                bottom: 4
-                            },
-                            cursoropacitymin: 0.2,
-                            cursoropacitymax: 0.6
+                            cursorcolor: "#0E7ABC", cursorwidth: '4px', railpadding: {
+                                top: 4, right: 0, left: 0, bottom: 4
+                            }, cursoropacitymin: 0.2, cursoropacitymax: 0.6
                         });
                 }, 0);
             })
@@ -258,26 +248,23 @@
                     .closest('.item-rating')
                     .trigger('update', [$this.attr('data-value')]);
             })
-            .hover(
-                function () {
-                    let $this = $(this);
-                    let item = $this.closest('.item-rating');
+            .hover(function () {
+                let $this = $(this);
+                let item = $this.closest('.item-rating');
 
-                    item.addClass('hover');
+                item.addClass('hover');
 
-                    $this.trigger('update');
-                },
-                function () {
-                    let $this = $(this);
-                    let item = $this.closest('.item-rating');
-                    let form = $this.closest('form');
-                    let value = form.find('input[name="rating"]').val();
+                $this.trigger('update');
+            }, function () {
+                let $this = $(this);
+                let item = $this.closest('.item-rating');
+                let form = $this.closest('form');
+                let value = form.find('input[name="rating"]').val();
 
-                    item.removeClass('hover');
+                item.removeClass('hover');
 
-                    $(this).trigger('update', [value]);
-                }
-            )
+                $(this).trigger('update', [value]);
+            })
             .click(function (e) {
                 e.preventDefault();
 
@@ -287,9 +274,7 @@
 
                 item.removeClass('hover');
 
-                form.find('input[name="rating"]').val(
-                    $this.attr('data-value')
-                );
+                form.find('input[name="rating"]').val($this.attr('data-value'));
             });
 
 
@@ -329,6 +314,26 @@
                 $('body').toggleClass('order-visible');
             });
 
+
+        $('[data-bottom-sheet-link]')
+            .once('bottom-sheet-link')
+            .click(function () {
+                let $this = $(this);
+                let key = $this.attr('data-bottom-sheet-link');
+
+                $('[data-bottom-sheet="' + key + '"]').addClass('open');
+            });
+
+
+        $('[data-bottom-sheet]')
+            .find('.overlay, .toggle')
+            .once('close')
+            .click(function (e) {
+                $(this)
+                    .closest('[data-bottom-sheet]')
+                    .removeClass('open');
+            });
+
     }
 
 
@@ -336,12 +341,7 @@
         let selector = '[data-fade-toggle]';
         let $target = $(event.target);
 
-        if (
-            !$target.closest(selector).length &&
-            $(selector).is(':visible') &&
-            !$target.closest('[data-fade-toggle-link]').length &&
-            !$target.filter('[data-fade-toggle-link]').length
-        ) {
+        if (!$target.closest(selector).length && $(selector).is(':visible') && !$target.closest('[data-fade-toggle-link]').length && !$target.filter('[data-fade-toggle-link]').length) {
             $(selector).fadeOut('fast');
         }
     });

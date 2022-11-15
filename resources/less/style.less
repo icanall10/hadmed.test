@@ -21,6 +21,18 @@ html {
     display: none;
 }
 
+@media screen and (max-width: 768px) {
+    .only-gt-768 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .only-lt-768 {
+        display: none;
+    }
+}
+
 #wrapper {
     display: grid;
     grid-template-columns: minmax(0, 224px) minmax(0, 1fr);
@@ -1980,6 +1992,7 @@ body {
             .select2-selection__rendered {
                 line-height: 30px;
             }
+
             .select2-selection__arrow {
                 height: 29px;
             }
@@ -2066,6 +2079,7 @@ body {
 
         .review {
             position: absolute;
+            z-index: -1;
             padding: 12px;
             left: 0;
             right: 0;
@@ -2219,5 +2233,106 @@ body {
         &:last-child {
             margin-bottom: 0;
         }
+    }
+}
+
+
+[data-bottom-sheet] {
+    position: fixed;
+    z-index: 5;
+
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    overflow: hidden;
+    height: 0;
+
+    transition: height 200ms linear;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+
+    &.open {
+        height: 100vh;
+
+        .body {
+            bottom: 0;
+        }
+
+        .overlay {
+            opacity: 0.5;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        z-index: -1;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background: #EEF1F8;
+        opacity: 0;
+
+        transition: opacity 500ms linear;
+    }
+
+    .body {
+        max-height: calc(100vh - 80px);
+
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+
+        .toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:after {
+                content: '';
+
+                width: 24px;
+                height: 24px;
+
+                transform: rotate(90deg);
+
+                background-size: 24px 24px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.29289 17.7071C7.90237 17.3166 7.90237 16.6834 8.29289 16.2929L12.5858 12L8.29289 7.70711C7.90237 7.31658 7.90237 6.68342 8.29289 6.29289C8.68342 5.90237 9.31658 5.90237 9.70711 6.29289L14 10.5858C14.781 11.3668 14.7811 12.6332 14 13.4142L9.70711 17.7071C9.31658 18.0976 8.68342 18.0976 8.29289 17.7071Z' fill='%230E7ABC'/%3E%3C/svg%3E%0A");
+            }
+        }
+
+        .content {
+            background: #EEF1F8;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 14px 14px 0 0;
+
+            overflow: auto;
+        }
+    }
+}
+
+
+.review-bottom-sheet {
+    .img {
+        margin: -20px -20px 15px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .name {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
     }
 }

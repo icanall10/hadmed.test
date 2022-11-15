@@ -347,8 +347,6 @@
             padding: 24px 24px 24px 48px;
             box-sizing: border-box;
 
-            max-height: calc(100vh - 80px);
-
             .inner {
                 height: 100%;
             }
@@ -1059,65 +1057,61 @@
         flex-direction: column;
         justify-content: flex-end;
 
+        .toggle {
+            left: 0;
+            right: 0;
+            top: -24px;
+            bottom: auto;
+
+            width: auto;
+            height: 24px;
+
+            .i {
+                transform: rotate(90deg);
+            }
+        }
+
         .content {
             height: auto;
             position: relative;
-            padding: 0;
+            padding: 24px;
             overflow: visible;
 
-            .inner {
-                padding: 24px;
-                box-sizing: border-box;
-                overflow: auto;
-                
-                .toggle {
-                    left: 0;
-                    right: 0;
-                    top: -24px;
-                    bottom: auto;
+            max-height: calc(100vh - 80px);
 
-                    width: auto;
-                    height: 24px;
+            .profile {
+                .name {
+                    font-size: 16px;
+                }
 
-                    .i {
-                        transform: rotate(90deg);
+                .fields {
+                    margin-bottom: 16px;
+
+                    .field {
+                        .label {
+                            font-size: 12px;
+                        }
+
+                        .value {
+                            font-size: 14px;
+                        }
                     }
                 }
 
-                .profile {
-                    .name {
-                        font-size: 16px;
-                    }
-
-                    .fields {
-                        margin-bottom: 16px;
-
-                        .field {
-                            .label {
-                                font-size: 12px;
-                            }
-
-                            .value {
-                                font-size: 14px;
-                            }
-                        }
-                    }
-
-                    .help {
-                        font-size: 12px;
-                    }
-
-                    .actions {
-                        .button {
-                            margin-right: 8px;
-
-                            &:last-child {
-                                margin-right: 0;
-                            }
-                        }
-                    }
-
+                .help {
+                    font-size: 12px;
                 }
+
+                .actions {
+                    .button {
+                        margin-right: 8px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
             }
         }
     }
