@@ -793,6 +793,7 @@ button .i,
 }
 .table .tr .td .name {
   font-size: 16px;
+  font-weight: 500;
 }
 .table .tr .td .tag {
   white-space: nowrap;
