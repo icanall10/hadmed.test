@@ -775,6 +775,9 @@ html body {
   padding: 0;
   min-width: 320px;
   cursor: default;
+  overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 .only-desktop {
   display: block;
