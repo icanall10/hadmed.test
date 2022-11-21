@@ -12,6 +12,7 @@ html body {
   overflow: hidden;
   touch-action: none;
   -ms-touch-action: none;
+  position: relative;
 }
 .only-desktop {
   display: block;
