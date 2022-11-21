@@ -151,7 +151,7 @@
 
         $('[data-scrollbar]')
             .once('scrollbar', function () {
-                if (is_mobile()) return;
+                // if (is_mobile()) return;
 
                 new SimpleBar(this);
             });
