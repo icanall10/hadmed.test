@@ -132,10 +132,10 @@
 })(jQuery);
 (function ($) {
 
-    document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+    document.documentElement.style.setProperty('--app-height', `500px`)
 
     $(window).resize(function(){
-        document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+        document.documentElement.style.setProperty('--app-height', `500px`)
     });
 
 
