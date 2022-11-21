@@ -1784,7 +1784,7 @@ body .flatpickr-months .flatpickr-next-month svg {
   display: flex;
 }
 .eat-bottom-sheet .choose a {
-  padding: 4px 14px 5px;
+  padding: 5px 14px;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.12;
