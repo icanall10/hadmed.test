@@ -132,11 +132,13 @@
 })(jQuery);
 (function ($) {
 
-    document.documentElement.style.setProperty('--app-height', `500px`)
+    const appHeight = () => {
+        const doc = document.documentElement
+        doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    }
 
-    $(window).resize(function(){
-        document.documentElement.style.setProperty('--app-height', `500px`)
-    });
+    window.addEventListener('resize', appHeight);
+    appHeight();
 
 
     let is_mobile = function () {
