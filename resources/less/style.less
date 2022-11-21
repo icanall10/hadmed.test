@@ -38,7 +38,7 @@ html {
     grid-template-columns: minmax(0, 224px) minmax(0, 1fr);
 
     #left {
-        height: 100vh;
+        height: var(--app-height);
     }
 
     #center {
@@ -46,7 +46,7 @@ html {
         box-sizing: border-box;
         margin-left: 24px;
 
-        height: 100vh;
+        height: var(--app-height);
 
         display: flex;
         flex-direction: column;
@@ -80,7 +80,7 @@ html {
         padding: 24px 48px;
         box-sizing: border-box;
 
-        height: 100vh;
+        height: var(--app-height);
     }
 }
 
@@ -476,7 +476,7 @@ button,
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    height: 100vh;
+    height: var(--app-height);
 
     .left {
         background: #EEF1F8;
@@ -2256,7 +2256,7 @@ body {
     align-items: stretch;
 
     &.open {
-        height: 100vh;
+        height: var(--app-height);
 
         .body {
             bottom: 0;
@@ -2428,12 +2428,3 @@ body {
 }
 
 
-body {
-    &.order-visible {
-        bottom: 0;
-        left: 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-    }
-}

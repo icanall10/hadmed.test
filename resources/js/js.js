@@ -1,5 +1,12 @@
 (function ($) {
 
+    document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+
+    $(window).resize(function(){
+        document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+    });
+
+
     let is_mobile = function () {
         return ($(window).width() <= 1440);
     }

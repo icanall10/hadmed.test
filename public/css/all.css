@@ -794,13 +794,13 @@ html body {
   grid-template-columns: minmax(0, 224px) minmax(0, 1fr);
 }
 #wrapper #left {
-  height: 100vh;
+  height: var(--app-height);
 }
 #wrapper #center {
   padding: 24px 0 0;
   box-sizing: border-box;
   margin-left: 24px;
-  height: 100vh;
+  height: var(--app-height);
   display: flex;
   flex-direction: column;
 }
@@ -826,7 +826,7 @@ html body {
   overflow-x: hidden;
   padding: 24px 48px;
   box-sizing: border-box;
-  height: 100vh;
+  height: var(--app-height);
 }
 body.has-right #wrapper {
   grid-template-columns: minmax(0, 224px) minmax(0, 50%) minmax(0, 1fr);
@@ -1128,7 +1128,7 @@ button .i,
 .auth-layout {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  height: 100vh;
+  height: var(--app-height);
 }
 .auth-layout .left {
   background: #EEF1F8;
@@ -2454,7 +2454,7 @@ body .flatpickr-months .flatpickr-next-month svg {
   align-items: stretch;
 }
 [data-bottom-sheet].open {
-  height: 100vh;
+  height: var(--app-height);
 }
 [data-bottom-sheet].open .body {
   bottom: 0;
@@ -2580,13 +2580,6 @@ body .flatpickr-months .flatpickr-next-month svg {
 }
 .eat-bottom-sheet.active .choose a .not-chosen {
   display: none;
-}
-body.order-visible {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
 }
 
 
