@@ -7,6 +7,15 @@
 
     function behaviors() {
 
+
+        $('[data-scrollbar]')
+            .once('scrollbar', function () {
+                if (is_mobile()) return;
+
+                new SimpleBar(this);
+            });
+
+
         $('[data-modal-link]')
             .once('modal-link')
             .click(function (e) {
