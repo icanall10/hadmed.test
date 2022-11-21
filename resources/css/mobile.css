@@ -326,10 +326,10 @@
   .order-block {
     position: fixed;
     z-index: 5;
-    top: 100vh;
+    top: var(--app-height);
     left: 0;
     right: 0;
-    height: 100vh;
+    height: var(--app-height);
     transition: right 200ms linear, top 200ms linear;
     display: flex;
     flex-direction: column;
@@ -350,7 +350,7 @@
     position: relative;
     z-index: 2;
     height: auto;
-    max-height: calc(100vh * 0.8);
+    max-height: calc(var(--app-height) * 0.8);
     background: #EEF1F8;
   }
   .order-block .content .inner {
@@ -380,7 +380,7 @@
   }
   body.order-visible .order-block .overlay {
     opacity: 0.4;
-    height: 100vh;
+    height: var(--app-height);
   }
   .eat-history-block .category {
     margin: 30px 0 20px;
@@ -701,8 +701,8 @@
   .patient-card-block {
     display: flex;
     width: auto;
-    top: 100vh;
-    height: 100vh;
+    top: var(--app-height);
+    height: var(--app-height);
     right: 0;
     left: 0;
     flex-direction: column;
@@ -724,7 +724,7 @@
     position: relative;
     padding: 24px;
     overflow: visible;
-    max-height: calc(100vh - 80px);
+    max-height: calc(var(--app-height) - 80px);
   }
   .patient-card-block .content .profile .name {
     font-size: 16px;
