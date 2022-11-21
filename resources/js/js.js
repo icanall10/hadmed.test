@@ -176,10 +176,29 @@
             });
 
 
+        $('[data-eat-choose-grid] [data-item]')
+            .once()
+            .click(function (e) {
+                e.preventDefault();
+
+                if (!is_mobile()) return;
+
+                let $this = $(this);
+
+                let key = $this.attr('data-item');
+
+                $('[data-eat-bottom-sheet="' + key + '"]')
+                    .closest('[data-bottom-sheet]')
+                    .addClass('open');
+            });
+
+
         $('[data-eat-choose-grid] [data-toggle]')
             .once()
             .click(function (e) {
                 e.preventDefault();
+
+                if (is_mobile()) return;
 
                 $(this)
                     .closest('.item')
@@ -189,18 +208,53 @@
 
         $('[data-eat-choose-grid] [data-choose]')
             .once()
-            .click(function (e) {
+            .on('choose', function (e) {
                 e.preventDefault();
 
                 let $this = $(this);
                 let item = $this.closest('[data-item]');
                 let grid = $this.closest('[data-eat-choose-grid]');
+                let key = item.attr('data-item');
+                let bottomSheet = $('[data-eat-bottom-sheet="' + key + '"]');
 
                 grid
                     .find('[data-item]')
-                    .removeClass('active');
+                    .removeClass('active')
+                    .each(function () {
+                        let itemKey = $(this).attr('data-item');
+
+                        $('[data-eat-bottom-sheet="' + itemKey + '"]').removeClass('active');
+                    });
 
                 item.addClass('active');
+                bottomSheet.addClass('active')
+            })
+            .click(function (e) {
+                e.preventDefault();
+
+                if (is_mobile()) return;
+
+                $(this).trigger('choose');
+            });
+
+
+        $('[data-eat-bottom-sheet] [data-choose]')
+            .once()
+            .click(function (e) {
+                e.preventDefault();
+
+                let $this = $(this);
+
+                let key = $this
+                    .closest('[data-eat-bottom-sheet]')
+                    .attr('data-eat-bottom-sheet');
+
+                let item = $('[data-eat-choose-grid] [data-item="' + key + '"]');
+
+                item
+                    .find('[data-choose]')
+                    .first()
+                    .trigger('choose');
             });
 
 
