@@ -775,6 +775,9 @@ html body {
   padding: 0;
   min-width: 320px;
   cursor: default;
+}
+html,
+body {
   overflow: hidden;
   touch-action: none;
   -ms-touch-action: none;
