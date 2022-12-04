@@ -73,6 +73,50 @@
 
             <div id="center">
                 <div id="header">
+                    <div class="before-header-block">
+                        <div class="menu">
+                            <ul>
+                                <li class="active">
+                                    <a href="./menu-patient.htm">
+                                        <span class="i i-eat icon-default"></span>
+                                        <span class="i i-eat-colored icon-colored"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./history-patient.htm">
+                                        <span class="i i-box icon-default"></span>
+                                        <span class="i i-box-colored icon-colored"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="logo-main">
+                            <img src="./img/logo.svg" alt="">
+                        </a>
+                        <a href="#" class="logo-petrushka">
+                            <img src="./img/petrushka.png" alt="">
+                        </a>
+                        <div class="profile">
+                            <a href="#" class="label" data-fade-toggle-link="profile-info">
+                                <span class="icon"></span>
+                            </a>
+                            <div class="info" data-fade-toggle="profile-info">
+                                <div class="segment">
+                                    <div class="name">Смирнова А.С.</div>
+                                    <div class="value">
+                                        <span>Отделение</span>
+                                        Гастроэнтерология
+                                    </div>
+                                    <div class="value">
+                                        <span>Диета</span>
+                                        Стандартная диета (ОВД)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="header-block">
                         <div class="menu-link-and-name">
                             <a href="#" class="menu-link" data-sidebar-toggle>
@@ -81,17 +125,19 @@
                             <div class="title">Меню</div>
                         </div>
 
+                        <div class="date">12 июля, вторник</div>
+
+                        <div class="green-menu">
+                            <a href="#" class="diet" data-modal-link="diet">Диета</a>
+                            <a href="#" class="active">ОВД</a>
+                        </div>
+
                         <div class="menu">
                             <div class="switch">
                                 <a href="#" class="active">Сегодня</a>
                                 <a href="#">Завтра</a>
                                 <a href="#">Послезавтра</a>
                             </div>
-                        </div>
-
-                        <div class="green-menu">
-                            <a href="#" data-modal-link="diet">Диета</a>
-                            <a href="#" class="active">ОВД</a>
                         </div>
                     </div>
 
@@ -448,7 +494,7 @@
                 </div>
             </div>
 
-            <div id="right" data-scrollbar>
+            <div id="right">
                 <div class="order-block">
                     <div class="overlay" data-order-toggle></div>
                     <div class="content">
@@ -456,83 +502,87 @@
                             <span class="i i-arrow"></span>
                         </a>
                         <div class="inner">
-                            <div class="block-title">Ваш заказ</div>
-                            <div class="info">
-                                Автоматический выбор блюд через: <span class="value">4 ч 15 м</span>
+                            <div class="header">
+                                <div class="block-title">Ваш заказ</div>
+                                <div class="info">
+                                    Автоматический выбор блюд через: <span class="value">4 ч 15 м</span>
+                                </div>
                             </div>
-                            <div class="items">
-                                <div class="box">
-                                    <div class="title">Завтрак</div>
-                                    <div class="item">
-                                        <div class="name">Каша овсяная с сухофруктами</div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="name">Яйцо варёное вкрутую</div>
-                                        <div class="toggle">
-                                            <div class="i i-double-arrow"></div>
+                            <div class="center" data-scrollbar>
+                                <div class="items">
+                                    <div class="box">
+                                        <div class="title">Завтрак</div>
+                                        <div class="item">
+                                            <div class="name">Каша овсяная с сухофруктами</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="name">Яйцо варёное вкрутую</div>
+                                            <div class="toggle">
+                                                <div class="i i-double-arrow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="name">Каша овсяная с сухофруктами</div>
+                                            <div class="toggle">
+                                                <div class="i i-double-arrow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="name">Ассорти из свежих фруктов</div>
+                                            <div class="toggle">
+                                                <div class="i i-double-arrow"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="name">Каша овсяная с сухофруктами</div>
-                                        <div class="toggle">
-                                            <div class="i i-double-arrow"></div>
+                                    <div class="box">
+                                        <div class="title">Обед</div>
+                                        <div class="item">
+                                            <div class="name">Суп куриный с вермишелью</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="name">Котлета из трески на пару</div>
+                                            <div class="toggle">
+                                                <div class="i i-double-arrow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="name">Пюре картофельное со сливочным маслом</div>
+                                            <div class="toggle">
+                                                <div class="i i-double-arrow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="name">Салат из капусты с огурцом</div>
+                                            <div class="toggle">
+                                                <div class="i i-double-arrow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="name">Компот из сухофруктов</div>
+                                            <div class="toggle">
+                                                <div class="i i-double-arrow"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="name">Ассорти из свежих фруктов</div>
-                                        <div class="toggle">
-                                            <div class="i i-double-arrow"></div>
+                                    <div class="box">
+                                        <div class="title">Полдник</div>
+                                        <div class="item">
+                                            <div class="name">Творог обезжиренный с ягодами</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="name">Апельсиновый сок</div>
+                                            <div class="toggle">
+                                                <div class="i i-double-arrow"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="box">
-                                    <div class="title">Обед</div>
-                                    <div class="item">
-                                        <div class="name">Суп куриный с вермишелью</div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="name">Котлета из трески на пару</div>
-                                        <div class="toggle">
-                                            <div class="i i-double-arrow"></div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="name">Пюре картофельное со сливочным маслом</div>
-                                        <div class="toggle">
-                                            <div class="i i-double-arrow"></div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="name">Салат из капусты с огурцом</div>
-                                        <div class="toggle">
-                                            <div class="i i-double-arrow"></div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="name">Компот из сухофруктов</div>
-                                        <div class="toggle">
-                                            <div class="i i-double-arrow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box">
-                                    <div class="title">Полдник</div>
-                                    <div class="item">
-                                        <div class="name">Творог обезжиренный с ягодами</div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="name">Апельсиновый сок</div>
-                                        <div class="toggle">
-                                            <div class="i i-double-arrow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box">
-                                    <div class="title">Ужин</div>
-                                    <div class="item">
-                                        <div class="name">Лосось запечённый</div>
-                                        <div class="toggle">
-                                            <div class="i i-double-arrow"></div>
+                                    <div class="box">
+                                        <div class="title">Ужин</div>
+                                        <div class="item">
+                                            <div class="name">Лосось запечённый</div>
+                                            <div class="toggle">
+                                                <div class="i i-double-arrow"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
