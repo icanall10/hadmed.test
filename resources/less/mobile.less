@@ -131,6 +131,10 @@
                 justify-content: space-between;
                 align-items: center;
 
+                &.columns-2 {
+                    grid-template-columns: repeat(2, auto);
+                }
+
                 .menu-link-and-name {
                     .menu-link {
                         display: block;
@@ -379,7 +383,7 @@
 
         top: 0;
         bottom: 0;
-        right: -480px;
+        right: -66%;
 
         transition: right 200ms linear, top 200ms linear;
 
