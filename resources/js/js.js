@@ -406,6 +406,20 @@
                     .removeClass('open');
             });
 
+
+        $('[data-tooltip]')
+            .once('tooltip', function(){
+                let $this = $(this);
+                let text = $this.attr('data-tooltip');
+
+                tippy(this, {
+                    content: text,
+                    placement: 'bottom-start',
+                    arrow: true,
+                    arrowType: 'round',
+                });
+            });
+
     }
 
 

@@ -35,6 +35,8 @@ mix.scripts([
     'resources/vendor/cleave.min.js',
     'resources/vendor/select2.full.min.js',
     'resources/vendor/jquery.nicescroll.min.js',
+    'resources/vendor/tippy/popper.min.js',
+    'resources/vendor/tippy/tippy-bundle.umd.min.js',
     'resources/js/helpers.js',
     'resources/js/js.js'
 ], 'public/js/all.js');
