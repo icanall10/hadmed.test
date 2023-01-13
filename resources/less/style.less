@@ -2657,8 +2657,8 @@ html {
 
     .inner {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 24px;
+        grid-template-columns: minmax(0, 1fr) repeat(4, auto);
+        gap: 16px;
         align-items: center;
 
         h1 {
@@ -2668,37 +2668,31 @@ html {
             color: var(--color-main);
         }
 
-        .info {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-
-            .item {
-                .text {
-                    font-size: 16px;
-                    font-weight: 600;
-                }
-
-                .time {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    height: 24px;
-                    padding: 0 12px;
-                    background: #EEF1F8;
-                    border-radius: 100px;
-                    font-size: 12px;
-                    font-weight: 600;
-                }
+        .item {
+            .text {
+                font-size: 16px;
+                font-weight: 600;
             }
 
-            .dot {
-                width: 4px;
-                height: 4px;
+            .time {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 24px;
+                padding: 0 12px;
+                background: #EEF1F8;
                 border-radius: 100px;
-                background: #A7BBC7;
+                font-size: 12px;
+                font-weight: 600;
             }
+        }
+
+        .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 100px;
+            background: #A7BBC7;
         }
     }
 }
@@ -2741,7 +2735,7 @@ html {
             .tr {
                 grid-template-columns: minmax(200px, 200px) minmax(70px, 70px) minmax(70px, 70px) minmax(0, 1fr) minmax(0, 1fr);
 
-                .comment-tablet {
+                .td-comment {
                     display: none;
                 }
             }

@@ -1372,7 +1372,6 @@
 }
 
 
-
 @media screen and (max-width: 1440px) {
     .report-block {
         .report {
@@ -1391,7 +1390,7 @@
                             display: none;
                         }
 
-                        &.comment-tablet {
+                        &.td-comment {
                             display: flex;
                             grid-column: span 5;
 
@@ -1416,6 +1415,46 @@
 
 
 @media screen and (max-width: 744px) {
+    html {
+        &.is-report-page {
+            body {
+                .container {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .report-header-block {
+        .inner {
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 8px 20px;
+
+            h1 {
+                font-size: 16px;
+
+                order: 1;
+            }
+
+            .item-time {
+                order: 2;
+            }
+
+            .item-date {
+                order: 3;
+            }
+
+            .item-eat {
+                order: 4;
+            }
+
+            .dot {
+                display: none;
+            }
+        }
+    }
+
     .report-block {
         .report {
             .container {
@@ -1426,6 +1465,7 @@
                 border-radius: 0;
                 border-left: none;
                 border-right: none;
+                border-width: 2px;
 
                 width: 100%;
 
@@ -1433,6 +1473,12 @@
 
                 .head {
                     display: grid;
+
+                    .tr {
+                        .th {
+                            font-weight: 500;
+                        }
+                    }
                 }
             }
 
@@ -1462,36 +1508,111 @@
                             align-items: center;
                             justify-content: center;
                         }
+
+                        .comment {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
 
             &.patients {
-                .tr {
-                    grid-template-columns: minmax(120px, 120px) minmax(70px, 70px) minmax(70px, 70px) minmax(0, 1fr) minmax(0, 1fr);
+                .head {
+                    .tr {
+                        grid-template-columns: 45% 55%;
 
-                    .td {
-                        .comment {
-                            display: none;
-                        }
-
-                        &.comment-tablet {
-                            display: flex;
-                            grid-column: span 5;
-
-                            .comment {
-                                display: block;
-                                padding: 8px 8px 8px 36px;
-                                background: #EEF1F8;
-                                border-radius: 8px;
-
-                                &:before {
-                                    top: 8px;
-                                    left: 8px;
-                                }
+                        .th {
+                            &.th-ward,
+                            &.th-diet,
+                            &.th-distribution {
+                                display: none;
                             }
                         }
                     }
+                }
+
+                .body {
+                    .tr {
+                        grid-template-columns: 45% 55%;
+                        grid-template-rows: repeat(3, auto) minmax(0, 1fr);
+                        gap: 8px;
+
+                        &.floor {
+                            display: grid;
+                            grid-template-columns: 45% auto;
+                            grid-template-rows: unset;
+
+                            .td {
+                                grid-column: unset;
+                            }
+                        }
+
+                        .td {
+                            &.td-distribution {
+                                display: none;
+                            }
+
+                            &.td-patient {
+                                order: 1;
+                                padding-bottom: 0;
+
+                                .patient {
+                                    margin-bottom: 0;
+                                }
+                            }
+
+                            &.td-eat {
+                                order: 2;
+                                grid-row: span 4;
+                            }
+
+                            &.td-diet {
+                                order: 3;
+                                padding: 0;
+                            }
+
+                            &.td-ward {
+                                order: 4;
+                                padding: 0;
+                            }
+
+                            &.td-comment {
+                                order: 5;
+                                grid-column: unset;
+                                padding-top: 0;
+
+                                .comment {
+                                    padding: 0 0 0 28px;
+                                    background: none;
+                                    font-size: 12px;
+
+                                    &:before {
+                                        left: 0;
+                                        top: 0;
+                                    }
+                                }
+                            }
+
+                            &.inline {
+                                flex-direction: row;
+                                align-items: center;
+
+                                .tag {
+                                    &:not(:last-child) {
+                                        margin: 0 6px 0 0;
+                                    }
+                                }
+                            }
+                            
+                            &.center {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+
+                .tr {
+                    grid-template-columns: minmax(120px, 120px) minmax(70px, 70px) minmax(70px, 70px) minmax(0, 1fr) minmax(0, 1fr);
                 }
             }
         }

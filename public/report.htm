@@ -16,17 +16,16 @@
         <div class="report-header-block">
             <div class="container inner">
                 <h1>Сводный отчёт</h1>
-                <div class="info">
-                    <div class="item">
-                        <div class="text">Ужин</div>
-                    </div>
-                    <div class="dot"></div>
-                    <div class="item">
-                        <div class="text">25 декабря, воскресенье</div>
-                    </div>
-                    <div class="item">
-                        <div class="time">17:03</div>
-                    </div>
+
+                <div class="item item-eat">
+                    <div class="text">Ужин</div>
+                </div>
+                <div class="dot"></div>
+                <div class="item item-date">
+                    <div class="text">25 декабря, воскресенье</div>
+                </div>
+                <div class="item item-time">
+                    <div class="time">17:03</div>
                 </div>
             </div>
         </div>
@@ -246,11 +245,11 @@
                 <div class="container inner">
                     <div class="head">
                         <div class="tr">
-                            <div class="th">фио пациента</div>
-                            <div class="th">палата</div>
-                            <div class="th center">диета</div>
-                            <div class="th">цех лечебного питания</div>
-                            <div class="th">цех линии раздачи</div>
+                            <div class="th th-patient">фио пациента</div>
+                            <div class="th th-ward">палата</div>
+                            <div class="th th-diet center">диета</div>
+                            <div class="th th-eat">цех лечебного питания</div>
+                            <div class="th th-distribution">цех линии раздачи</div>
                         </div>
                     </div>
                     <div class="body">
@@ -260,16 +259,16 @@
                             </div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Жанкидиров М.Т.</div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-7</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag green">ОВД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Рулет из белой рыбы с овощами и сыром 120 гр.</li>
                                     <li>Рагу овощное с тыквой 150 гр.</li>
@@ -278,60 +277,63 @@
                                     <li>Булочка французская 35гр. в асс.</li>
                                 </ul>
                             </div>
+                            <div class="td td-distribution"></div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Кузнецов А.С.</div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-7</div>
                             </div>
-                            <div class="td inline">
-                                <div class="tag twin">ОВД</div>
+                            <div class="td td-diet inline">
+                                <div class="tag green">ОВД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Рулет из белой рыбы с овощами и сыром 120 гр.</li>
                                 </ul>
                             </div>
+                            <div class="td td-distribution"></div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Иванов В.Н.</div>
                                 <div class="comment" data-tooltip="Питание через зонд комментарий">Питание через зонд</div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-7</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag grey">000</div>
                                 <div class="diet">Нулевая диета</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Бульон куриный 250гр.</li>
                                     <li>Вода "Jеvea" 0,51л.</li>
                                 </ul>
                             </div>
-                            <div class="td comment-tablet">
+                            <div class="td td-distribution"></div>
+                            <div class="td td-comment">
                                 <div class="comment" data-tooltip="Питание через зонд комментарий">Питание через зонд</div>
                             </div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Миронова А.В.</div>
                                 <div class="comment" data-tooltip="Питание">
                                     Просьба - мясо в виде котлет. Не ест: макароны, рис, картофель, сельдерей. Соль класть меньше.
                                 </div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-16</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag orange">ВБД</div>
                                 <div class="diet">День 2</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Рулет из белой рыбы с овощами и сыром 120 гр.</li>
                                     <li>Рагу овощное с тыквой 150 гр.</li>
@@ -340,7 +342,8 @@
                                     <li>Булочка французская 35гр. в асс.</li>
                                 </ul>
                             </div>
-                            <div class="td comment-tablet">
+                            <div class="td td-distribution"></div>
+                            <div class="td td-comment">
                                 <div class="comment" data-tooltip="Питание через зонд комментарий">
                                     Просьба - мясо в виде котлет. Не ест: макароны, рис, картофель, сельдерей. Соль класть меньше.
                                 </div>
@@ -367,20 +370,20 @@
                             </div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Бахирев А.Ф.</div>
                                 <div class="comment" data-tooltip="Питание">
                                     Питание через зонд
                                 </div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-13</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag yellow">ЩД</div>
                                 <div class="diet">День 2</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Фрикадельки рыбные 100 гр.</li>
                                     <li>Каша из тыквы без сахара 165 гр.</li>
@@ -389,7 +392,8 @@
                                     <li>Булочка французская 35гр. в асс., 3 шт</li>
                                 </ul>
                             </div>
-                            <div class="td comment-tablet">
+                            <div class="td td-distribution"></div>
+                            <div class="td td-comment">
                                 <div class="comment" data-tooltip="Питание через зонд комментарий">
                                     Питание через зонд
                                 </div>
@@ -402,16 +406,16 @@
                             </div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Хохлова С.И.</div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">3а-3</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag green">ОВД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Фрикадельки рыбные 100 гр.</li>
                                     <li>Каша из тыквы без сахара 165 гр.</li>
@@ -420,18 +424,19 @@
                                     <li>Булочка французская 35гр. в асс., 3 шт</li>
                                 </ul>
                             </div>
+                            <div class="td td-distribution"></div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Рыбина Н.К.</div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">3а-2</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag green">ОВД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Фрикадельки рыбные 100 гр.</li>
                                     <li>Каша из тыквы без сахара 165 гр.</li>
@@ -440,27 +445,29 @@
                                     <li>Булочка французская 35гр. в асс., 3 шт</li>
                                 </ul>
                             </div>
+                            <div class="td td-distribution"></div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Конюхова А.В.</div>
                                 <div class="comment" data-tooltip="Питание">
                                     В основном ест каши ,супы. к диете добавьте бульон на обед и ужин.
                                 </div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-7</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag grey">000</div>
                                 <div class="diet">Нулевая диета</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Вода "Jеvea" 0,51л.</li>
                                 </ul>
                             </div>
-                            <div class="td comment-tablet">
+                            <div class="td td-distribution"></div>
+                            <div class="td td-comment">
                                 <div class="comment" data-tooltip="Питание через зонд комментарий">
                                     В основном ест каши ,супы. к диете добавьте бульон на обед и ужин.
                                 </div>
@@ -468,16 +475,16 @@
                         </div>
 
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Желновач А.В.</div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-7</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag green">ОВД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Рулет из белой рыбы с овощами и сыром 120 гр.</li>
                                     <li>Рагу овощное с тыквой 150 гр.</li>
@@ -486,18 +493,19 @@
                                     <li>Булочка французская 35гр. в асс.</li>
                                 </ul>
                             </div>
+                            <div class="td td-distribution"></div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Викулов В.В.</div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-7</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag green">ОВД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Рулет из белой рыбы с овощами и сыром 120 гр.</li>
                                     <li>Рагу овощное с тыквой 150 гр.</li>
@@ -506,21 +514,22 @@
                                     <li>Булочка французская 35гр. в асс.</li>
                                 </ul>
                             </div>
+                            <div class="td td-distribution"></div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Васькина Л.Ф.</div>
                                 <div class="comment" data-tooltip="Питание">
                                     Бульон раз в день. Крем-суп не ест.
                                 </div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-7</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag green">ОВД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Рулет из белой рыбы с овощами и сыром 120 гр.</li>
                                     <li>Рагу овощное с тыквой 150 гр.</li>
@@ -529,7 +538,8 @@
                                     <li>Булочка французская 35гр. в асс.</li>
                                 </ul>
                             </div>
-                            <div class="td comment-tablet">
+                            <div class="td td-distribution"></div>
+                            <div class="td td-comment">
                                 <div class="comment" data-tooltip="Питание через зонд комментарий">
                                     Бульон раз в день. Крем-суп не ест.
                                 </div>
@@ -556,19 +566,19 @@
                             </div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Суханов А.Л.</div>
                                 <div class="comment" data-tooltip="Питание">
                                     Просьба приносить бульон. Питание через зонд
                                 </div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-7</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag yellow">ЩД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Рулет из белой рыбы с овощами и сыром 120 гр.</li>
                                     <li>Рагу овощное с тыквой 150 гр.</li>
@@ -577,27 +587,28 @@
                                     <li>Булочка французская 35гр. в асс.</li>
                                 </ul>
                             </div>
-                            <div class="td comment-tablet">
+                            <div class="td td-distribution"></div>
+                            <div class="td td-comment">
                                 <div class="comment" data-tooltip="Питание через зонд комментарий">
                                     Просьба приносить бульон. Питание через зонд
                                 </div>
                             </div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Власова З.</div>
                                 <div class="comment" data-tooltip="Питание">
                                     Овсяная каша на воде. отварная гречка без молока.
                                     исключить: капуста, горошек, соленое. рыба без подливы.
                                 </div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">2а-7</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag green">ОВД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Рулет из белой рыбы с овощами и сыром 120 гр.</li>
                                     <li>Рагу овощное с тыквой 150 гр.</li>
@@ -606,7 +617,8 @@
                                     <li>Булочка французская 35гр. в асс.</li>
                                 </ul>
                             </div>
-                            <div class="td comment-tablet">
+                            <div class="td td-distribution"></div>
+                            <div class="td td-comment">
                                 <div class="comment" data-tooltip="Питание через зонд комментарий">
                                     Овсяная каша на воде. отварная гречка без молока.
                                     исключить: капуста, горошек, соленое. рыба без подливы.
@@ -620,16 +632,16 @@
                             </div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Туголукова Н.И.</div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">4а-11</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag green">ОВД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Фрикадельки рыбные 100 гр.</li>
                                     <li>Каша из тыквы без сахара 165 гр.</li>
@@ -638,18 +650,19 @@
                                     <li>Булочка французская 35гр. в асс., 3 шт</li>
                                 </ul>
                             </div>
+                            <div class="td td-distribution"></div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Ухаживающая Т.</div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">4а-11</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag yellow">ЩД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Фрикадельки рыбные 100 гр.</li>
                                     <li>Каша из тыквы без сахара 165 гр.</li>
@@ -658,6 +671,7 @@
                                     <li>Булочка французская 35гр. в асс., 3 шт</li>
                                 </ul>
                             </div>
+                            <div class="td td-distribution"></div>
                         </div>
 
                         <div class="tr floor">
@@ -666,16 +680,16 @@
                             </div>
                         </div>
                         <div class="tr">
-                            <div class="td">
+                            <div class="td td-patient">
                                 <div class="patient">Шаврина Я.А.</div>
                             </div>
-                            <div class="td center">
+                            <div class="td td-ward center">
                                 <div class="text">—</div>
                             </div>
-                            <div class="td inline">
+                            <div class="td td-diet inline">
                                 <div class="tag green">ОВД</div>
                             </div>
-                            <div class="td">
+                            <div class="td td-eat">
                                 <ul>
                                     <li>Фрикадельки рыбные 100 гр.</li>
                                     <li>Каша из тыквы без сахара 165 гр.</li>
@@ -684,6 +698,7 @@
                                     <li>Булочка французская 35гр. в асс., 3 шт</li>
                                 </ul>
                             </div>
+                            <div class="td td-distribution"></div>
                         </div>
                     </div>
                 </div>

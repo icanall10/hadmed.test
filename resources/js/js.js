@@ -422,17 +422,28 @@
 
 
         $('.report-block .main')
-            .once('responsive', function () {
+            .once('responsive')
+            .on('responsiveUpdate', function () {
                 let $this = $(this);
                 let tr = $this.find('.tr').first();
                 let width = tr.outerWidth();
+                let headAndBody = $this.find('.head, .body');
 
-                $this
-                    .find('.head, .body')
-                    .css('width', width + 'px');
-            });
+                if (!is_mobile()) {
+                    headAndBody.css('width', 'auto');
+                    return;
+                }
+
+                headAndBody.css('width', width + 'px');
+            })
+            .trigger('responsiveUpdate');
 
     }
+
+
+    $(window).resize(function () {
+        $('.report-block .main').trigger('responsiveUpdate');
+    });
 
 
     $(document).click(function (event) {
