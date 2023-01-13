@@ -550,7 +550,7 @@
 
 
         $('[data-tooltip]')
-            .once('tooltip', function(){
+            .once('tooltip', function () {
                 let $this = $(this);
                 let text = $this.attr('data-tooltip');
 
@@ -560,6 +560,18 @@
                     arrow: true,
                     arrowType: 'round',
                 });
+            });
+
+
+        $('.report-block .main')
+            .once('responsive', function () {
+                let $this = $(this);
+                let tr = $this.find('.tr').first();
+                let width = tr.outerWidth();
+
+                $this
+                    .find('.head, .body')
+                    .css('width', width + 'px');
             });
 
     }

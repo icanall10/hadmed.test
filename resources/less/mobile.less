@@ -5,6 +5,10 @@
         display: none;
     }
 
+    .only-tablet-or-mobile {
+        display: block;
+    }
+
     .only-mobile {
         display: block;
     }
@@ -1362,6 +1366,133 @@
             .th:last-child,
             .td:last-child {
                 padding-right: 0;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1440px) {
+    .report-block {
+        .report {
+            &.main {
+                .tr {
+                    grid-template-columns: minmax(0, 1fr) repeat(5, minmax(56px, 56px));
+                }
+            }
+
+            &.patients {
+                .tr {
+                    grid-template-columns: minmax(120px, 120px) minmax(70px, 70px) minmax(70px, 70px) minmax(0, 1fr) minmax(0, 1fr);
+
+                    .td {
+                        .comment {
+                            display: none;
+                        }
+
+                        &.comment-tablet {
+                            display: flex;
+                            grid-column: span 5;
+
+                            .comment {
+                                display: block;
+                                padding: 8px 8px 8px 36px;
+                                background: #EEF1F8;
+                                border-radius: 8px;
+
+                                &:before {
+                                    top: 8px;
+                                    left: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 744px) {
+    .report-block {
+        .report {
+            .container {
+                margin: 0;
+            }
+
+            .inner {
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+
+                width: 100%;
+
+                overflow: auto;
+
+                .head {
+                    display: grid;
+                }
+            }
+
+            &.main {
+                .body {
+                    .tr {
+                        .td {
+                            &.total {
+                                background: #EEF1F8;
+                            }
+                        }
+                    }
+                }
+
+                .tr {
+                    grid-template-columns: minmax(186px, 186px) repeat(5, minmax(56px, 56px));
+
+                    .td {
+                        &.total {
+                            border-left: 1px solid #A7BBC7;
+                            border-right: 1px solid #A7BBC7;
+
+                            height: 100%;
+                            box-sizing: border-box;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+
+            &.patients {
+                .tr {
+                    grid-template-columns: minmax(120px, 120px) minmax(70px, 70px) minmax(70px, 70px) minmax(0, 1fr) minmax(0, 1fr);
+
+                    .td {
+                        .comment {
+                            display: none;
+                        }
+
+                        &.comment-tablet {
+                            display: flex;
+                            grid-column: span 5;
+
+                            .comment {
+                                display: block;
+                                padding: 8px 8px 8px 36px;
+                                background: #EEF1F8;
+                                border-radius: 8px;
+
+                                &:before {
+                                    top: 8px;
+                                    left: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

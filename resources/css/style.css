@@ -20,6 +20,9 @@ body {
 .only-desktop {
   display: block;
 }
+.only-tablet-or-mobile {
+  display: none;
+}
 .only-mobile {
   display: none;
 }
@@ -2022,7 +2025,32 @@ html.is-report-page body .container {
   background: #A7BBC7;
 }
 .report-block {
-  margin: 24px 0 40px;
+  margin: 24px 0;
+}
+.report-block .report {
+  margin: 24px 0;
+}
+.report-block .report.main .tr {
+  grid-template-columns: minmax(0, 1fr) repeat(5, minmax(88px, 88px));
+}
+.report-block .report.patients .body .tr {
+  align-items: flex-start;
+}
+.report-block .report.patients .body .tr .td {
+  padding: 8px 0;
+}
+.report-block .report.patients .body .tr .td.inline {
+  flex-direction: column;
+  align-items: center;
+}
+.report-block .report.patients .body .tr .td.inline .tag:not(:last-child) {
+  margin: 0 0 6px;
+}
+.report-block .report.patients .tr {
+  grid-template-columns: minmax(200px, 200px) minmax(70px, 70px) minmax(70px, 70px) minmax(0, 1fr) minmax(0, 1fr);
+}
+.report-block .report.patients .tr .comment-tablet {
+  display: none;
 }
 .report-block .inner {
   border: 1px solid #A7BBC7;
@@ -2054,9 +2082,31 @@ html.is-report-page body .container {
 .report-block .inner .body .tr.dashed:not(:last-child) {
   border-bottom-style: dashed;
 }
+.report-block .inner .body .tr.floor {
+  background: #A7BBC7;
+}
+.report-block .inner .body .tr.floor .td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 5;
+}
+.report-block .inner .body .tr.floor .td span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 0 8px;
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  background: #fff;
+  color: #a7bbc7;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 .report-block .inner .tr {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) repeat(5, minmax(88px, 88px));
   gap: 16px;
   align-items: center;
   padding: 0 16px;
@@ -2070,11 +2120,17 @@ html.is-report-page body .container {
   color: #A7BBC7;
   text-transform: uppercase;
 }
+.report-block .inner .tr .th.center {
+  text-align: center;
+}
 .report-block .inner .tr .th.value {
   text-align: center;
 }
 .report-block .inner .tr .td {
   padding: 6px 0;
+}
+.report-block .inner .tr .td.center {
+  text-align: center;
 }
 .report-block .inner .tr .td.inline {
   display: flex;
@@ -2085,19 +2141,26 @@ html.is-report-page body .container {
 .report-block .inner .tr .td.value {
   text-align: center;
 }
-.report-block .inner .tr .td .text.grey {
-  color: #A7BBC7;
+.report-block .inner .tr .td .text {
+  font-weight: 500;
+}
+.report-block .inner .tr .td .diet {
   font-size: 12px;
   font-weight: 500;
+  color: #A7BBC7;
+  text-align: center;
+  line-height: 1.3;
 }
 .report-block .inner .tr .td .tag {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 8px;
-  min-height: 24px;
+  height: 24px;
+  line-height: 24px;
   border-radius: 100px;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 12px;
   text-align: center;
 }
 .report-block .inner .tr .td .tag:not(:last-child) {
@@ -2153,6 +2216,34 @@ html.is-report-page body .container {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.75 2.5H16.25C17.6307 2.5 18.75 3.61929 18.75 5V12.5C18.75 13.8807 17.6307 15 16.25 15H11.875L10.559 17.1559C10.3287 17.6166 9.67131 17.6166 9.44098 17.1559L8.125 15H3.75C2.36929 15 1.25 13.8807 1.25 12.5V5C1.25 3.61929 2.36929 2.5 3.75 2.5ZM6.55045 9.58984C6.75217 9.36768 6.875 9.07471 6.875 8.75C6.875 8.05908 6.31531 7.5 5.625 7.5C4.93469 7.5 4.375 8.05908 4.375 8.75C4.375 9.44092 4.93469 10 5.625 10C5.99182 10 6.32172 9.84131 6.55045 9.58984ZM10 10C10.6903 10 11.25 9.44092 11.25 8.75C11.25 8.43994 11.138 8.15918 10.9525 7.94189C10.7233 7.6709 10.3816 7.5 10 7.5C9.67224 7.5 9.37408 7.62695 9.15115 7.83203C8.90442 8.06152 8.75 8.38623 8.75 8.75C8.75 9.44092 9.30969 10 10 10ZM15.625 8.75C15.625 9.15771 15.4297 9.51904 15.1274 9.74854C14.9181 9.90723 14.6574 10 14.375 10C13.6847 10 13.125 9.44092 13.125 8.75C13.125 8.05908 13.6847 7.5 14.375 7.5C15.0653 7.5 15.625 8.05908 15.625 8.75Z' fill='%23A7BBC7'/%3E%3C/svg%3E%0A");
+}
+.report-block .inner .tr .td ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.report-block .inner .tr .td ul li {
+  list-style: none;
+  padding: 0 0 0 12px;
+  margin: 0;
+  font-size: 12px;
+  position: relative;
+}
+.report-block .inner .tr .td ul li:before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  background: #222;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  border-radius: 100px;
+}
+.report-block .inner .tr .td .patient {
+  font-weight: 500;
+}
+.report-block .inner .tr .td .patient:not(:last-child) {
+  margin-bottom: 6px;
 }
 .tippy-box {
   background: #fff;
