@@ -9,8 +9,12 @@
     appHeight();
 
 
-    let is_mobile = function () {
+    let is_tablet_or_mobile = function () {
         return ($(window).width() <= 1440);
+    }
+
+    let is_mobile = function () {
+        return ($(window).width() <= 960);
     }
 
 
@@ -19,7 +23,7 @@
 
         $('[data-scrollbar]')
             .once('scrollbar', function () {
-                // if (is_mobile()) return;
+                // if (is_tablet_or_mobile()) return;
 
                 new SimpleBar(this);
             });
@@ -121,7 +125,7 @@
                 let $this = $(this);
                 let tr = $this.find('.tr');
 
-                if (is_mobile()) {
+                if (is_tablet_or_mobile()) {
                     tr.css('grid-template-columns', $this.attr('data-columns-mobile'));
                 } else {
                     tr.css('grid-template-columns', $this.attr('data-columns'));
@@ -429,7 +433,7 @@
                 let width = tr.outerWidth();
                 let headAndBody = $this.find('.head, .body');
 
-                if (!is_mobile()) {
+                if (!is_tablet_or_mobile()) {
                     headAndBody.css('width', 'auto');
                     return;
                 }

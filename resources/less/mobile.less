@@ -1165,6 +1165,26 @@
 
             max-height: calc(var(--app-height) - 80px);
 
+            .inner {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr);
+                grid-template-rows: auto minmax(0, 1fr);
+
+                .eat {
+                    &.active {
+                        height: 100%;
+
+                        display: grid;
+                        grid-template-columns: minmax(0, 1fr);
+                        grid-template-rows: auto minmax(0, 1fr);
+
+                        .eat-body {
+                            overflow: auto;
+                        }
+                    }
+                }
+            }
+
             .profile {
                 .name {
                     font-size: 16px;
@@ -1603,7 +1623,7 @@
                                     }
                                 }
                             }
-                            
+
                             &.center {
                                 text-align: left;
                             }
