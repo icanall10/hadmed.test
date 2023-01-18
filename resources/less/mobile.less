@@ -137,6 +137,10 @@
 
                 &.columns-2 {
                     grid-template-columns: repeat(2, auto);
+
+                    .menu-link-and-name {
+                        grid-column: unset;
+                    }
                 }
 
                 .menu-link-and-name {
@@ -821,6 +825,12 @@
     }
 
     body {
+        &.is-menu-page {
+            .header-block {
+                margin-bottom: 52px;
+            }
+        }
+
         &,
         &.has-right {
             .header-block {
@@ -834,7 +844,7 @@
 
                 padding: 0 20px;
                 position: relative;
-                margin-bottom: 52px;
+                margin-bottom: 24px;
 
                 &.name-full-width {
                     margin-bottom: 16px;
@@ -1372,16 +1382,11 @@
 
     .patients-list {
         .tr {
-            grid-template-columns: minmax(0, 1fr) auto !important;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 30px) minmax(0, 1fr) minmax(0, 50px)  !important;
 
-            .th-number,
-            .th-department {
-                display: none;
-            }
-
-            .td-number,
-            .td-department {
-                display: none;
+            .th,
+            .td {
+                margin-right: 6px;
             }
 
             .th:last-child,
