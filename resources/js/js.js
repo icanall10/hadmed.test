@@ -205,6 +205,10 @@
 
                 if (!is_mobile()) return;
 
+                let target = $(e.target);
+
+                if (target.closest('.toggle').length || target.hasClass('text')) return;
+
                 let $this = $(this);
 
                 let key = $this.attr('data-item');
@@ -219,8 +223,6 @@
             .once()
             .click(function (e) {
                 e.preventDefault();
-
-                if (is_mobile()) return;
 
                 $(this)
                     .closest('.item')
