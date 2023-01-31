@@ -143,12 +143,6 @@
                     }
                 }
 
-                .menu-link-and-name {
-                    .menu-link {
-                        display: block;
-                    }
-                }
-
                 .date-form {
                     max-width: 100%;
                 }
@@ -387,11 +381,12 @@
     .patient-card-block {
         position: fixed;
         z-index: 5;
-        width: 66%;
+
+        width: 80%;
+        right: -80%;
 
         top: 0;
         bottom: 0;
-        right: -66%;
 
         transition: right 200ms linear, top 200ms linear;
 
@@ -645,6 +640,34 @@
             }
         }
     }
+
+    .eat-history-grid {
+        .item {
+            .info {
+                .value {
+                    .portion {
+                        display: block;
+                        margin: 2px 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .table {
+        .tr {
+            &.active {
+                margin: 0 -24px 0 -16px;
+                padding: 0 24px 0 16px;
+            }
+
+            .th,
+            .td {
+                padding-top: 13px;
+                padding-bottom: 13px;
+            }
+        }
+    }
 }
 
 
@@ -670,6 +693,14 @@
 
             #content {
                 padding-left: 24px;
+            }
+        }
+    }
+
+    .header-block {
+        .menu-link-and-name {
+            .menu-link {
+                display: block;
             }
         }
     }
@@ -744,6 +775,30 @@
 
     .eat-grid {
         grid-template-columns: minmax(0, 1fr);
+
+        .item {
+            .info {
+                .value {
+                    .portion {
+                        display: block;
+                        margin: 5px 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .eat-choose-grid {
+        .item {
+            .info {
+                .value {
+                    .portion {
+                        display: block;
+                        margin: 5px 0 0;
+                    }
+                }
+            }
+        }
     }
 
     .eat-choose-block {
@@ -812,6 +867,19 @@
                     font-weight: 500;
                     padding: 3px 12px;
                 }
+            }
+        }
+    }
+
+    .table {
+        .tr {
+            &.active {
+                border-radius: 0;
+                margin-left: -24px;
+                margin-right: -24px;
+
+                padding-left: 24px;
+                padding-right: 24px;
             }
         }
     }
@@ -1095,8 +1163,6 @@
 
                 padding-left: 20px;
                 padding-right: 20px;
-
-                border-radius: 0;
             }
 
             &.thead {
@@ -1236,6 +1302,29 @@
         .patient-card-block {
             right: 0;
             top: 0;
+        }
+    }
+
+    .patient-card-block {
+        .content {
+            border-radius: 20px 20px 0 0;
+
+            .profile {
+                .actions {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: 8px;
+
+                    .button,
+                    button {
+                        margin-right: 0;
+
+                        &.span-full {
+                            grid-column: span 2;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -1382,7 +1471,7 @@
 
     .patients-list {
         .tr {
-            grid-template-columns: minmax(0, 1fr) minmax(0, 42px) minmax(0, 1fr) minmax(0, 50px)  !important;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 42px) minmax(0, 1fr) minmax(0, 50px) !important;
 
             .th,
             .td {

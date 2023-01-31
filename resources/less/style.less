@@ -451,7 +451,7 @@ button,
     align-items: center;
     justify-content: center;
 
-    transition: background 150ms linear;
+    transition: 150ms linear;
 
     &:hover {
         background: #11669A;
@@ -462,6 +462,11 @@ button,
         background: transparent;
         color: var(--color-main);
         position: relative;
+
+        &:hover {
+            color: #11669A;
+            border-color: #11669A;
+        }
     }
 
     .i {
@@ -1691,6 +1696,12 @@ body {
                 font-size: 12px;
                 line-height: 1.33;
                 margin-bottom: 8px;
+
+                .portion {
+                    text-transform: uppercase;
+                    color: #A7BBC7;
+                    margin-left: 6px;
+                }
             }
 
             .text {
@@ -1806,6 +1817,12 @@ body {
             .value {
                 color: #a7bbc7;
                 font-size: 12px;
+
+                .portion {
+                    text-transform: uppercase;
+                    color: #A7BBC7;
+                    margin-left: 6px;
+                }
             }
 
             .text {
@@ -2111,6 +2128,12 @@ body {
             .value {
                 color: #a7bbc7;
                 font-size: 13px;
+
+               .portion {
+                   text-transform: uppercase;
+                   color: #A7BBC7;
+                   margin-left: 6px;
+               }
             }
         }
 
@@ -3023,5 +3046,12 @@ html {
             top: -5px !important;
             border-width: 0 5px 5px !important;
         }
+    }
+}
+
+
+.patients-list {
+    .th {
+        display: flex;
     }
 }
