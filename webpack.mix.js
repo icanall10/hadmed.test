@@ -37,6 +37,7 @@ mix.scripts([
     'resources/vendor/jquery.nicescroll.min.js',
     'resources/vendor/tippy/popper.min.js',
     'resources/vendor/tippy/tippy-bundle.umd.min.js',
+    'resources/vendor/xwiper.js',
     'resources/js/helpers.js',
     'resources/js/js.js'
 ], 'public/js/all.js');

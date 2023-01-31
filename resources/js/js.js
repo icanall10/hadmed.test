@@ -444,6 +444,20 @@
             })
             .trigger('responsiveUpdate');
 
+
+        $('[data-bottom-sheet]')
+            .once('swipe-close', function () {
+                let $this = $(this);
+
+                const xwiper = new Xwiper(this);
+
+                xwiper.onSwipeDown(function(){
+                    $this
+                        .closest('[data-bottom-sheet]')
+                        .removeClass('open');
+                });
+            });
+
     }
 
 
