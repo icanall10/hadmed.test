@@ -198,35 +198,23 @@
             });
 
 
-        $('[data-eat-choose-grid] [data-item]')
-            .once()
+        $('[data-eat-choose-grid] [data-toggle]')
+            .once('toggle-mobile')
             .click(function (e) {
                 e.preventDefault();
-
-                if (!is_mobile()) return;
-
-                let target = $(e.target);
-
-                if (target.closest('.toggle').length || target.hasClass('text')) return;
 
                 let $this = $(this);
+                let item = $this.closest('[data-item]');
+                let key = item.attr('data-item');
 
-                let key = $this.attr('data-item');
+                if (is_mobile()) {
+                    $('[data-eat-bottom-sheet="' + key + '"]')
+                        .closest('[data-bottom-sheet]')
+                        .addClass('open');
+                    return;
+                }
 
-                $('[data-eat-bottom-sheet="' + key + '"]')
-                    .closest('[data-bottom-sheet]')
-                    .addClass('open');
-            });
-
-
-        $('[data-eat-choose-grid] [data-toggle]')
-            .once()
-            .click(function (e) {
-                e.preventDefault();
-
-                $(this)
-                    .closest('.item')
-                    .toggleClass('open');
+                item.toggleClass('open');
             });
 
 
@@ -255,8 +243,6 @@
             })
             .click(function (e) {
                 e.preventDefault();
-
-                if (is_mobile()) return;
 
                 $(this).trigger('choose');
             });
@@ -451,7 +437,7 @@
 
                 const xwiper = new Xwiper(this);
 
-                xwiper.onSwipeDown(function(){
+                xwiper.onSwipeDown(function () {
                     $this
                         .closest('[data-bottom-sheet]')
                         .removeClass('open');
