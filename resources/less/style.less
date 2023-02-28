@@ -2129,11 +2129,11 @@ body {
                 color: #a7bbc7;
                 font-size: 13px;
 
-               .portion {
-                   text-transform: uppercase;
-                   color: #A7BBC7;
-                   margin-left: 6px;
-               }
+                .portion {
+                    text-transform: uppercase;
+                    color: #A7BBC7;
+                    margin-left: 6px;
+                }
             }
         }
 
@@ -2680,15 +2680,79 @@ html {
 
     .inner {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) repeat(4, auto);
+        grid-template-columns: repeat(4, auto) minmax(0, 1fr) repeat(4, auto);
         gap: 16px;
         align-items: center;
+
+        .back {
+            display: flex;
+
+            grid-column: span 5;
+
+            a {
+                display: grid;
+                grid-template-columns: auto minmax(0, 1fr);
+                gap: 8px;
+                align-items: center;
+
+                border: 2px solid #0E7ABC;
+                border-radius: 8px;
+                padding: 5px 20px;
+
+                font-size: 16px;
+                font-weight: 600;
+
+                line-height: 1.1;
+
+                &:before {
+                    content: '';
+
+                    width: 16px;
+                    height: 16px;
+
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.247332 7.38702L5.62134 1.85612C5.95112 1.51671 6.48579 1.51671 6.81557 1.85612C7.14534 2.19552 7.14534 2.7458 6.81557 3.0852L2.88311 7.13246H14.3556C14.8219 7.13246 15.2 7.52157 15.2 8.00156C15.2 8.48155 14.8219 8.87066 14.3556 8.87066H2.88311L6.81557 12.9179C7.14534 13.2573 7.14534 13.8076 6.81557 14.147C6.48579 14.4864 5.95112 14.4864 5.62134 14.147L0.247332 8.61611C-0.0824439 8.2767 -0.0824439 7.72642 0.247332 7.38702Z' fill='%230E7ABC'/%3E%3C/svg%3E%0A");
+                }
+            }
+        }
+
+        .change {
+            display: flex;
+            justify-content: flex-end;
+
+            grid-column: span 4;
+
+            .value {
+                font-size: 12px;
+                line-height: 1.2;
+                color: var(--color-main);
+
+                padding: 4px 12px;
+
+                border-radius: 100px;
+                border: 1px dashed var(--color-main);
+
+                .time {
+                    color: #000;
+                    margin-left: 8px;
+                }
+            }
+        }
 
         h1 {
             font-size: 24px;
             font-weight: 800;
             margin: 0;
             color: var(--color-main);
+
+            grid-column: span 5;
+
+            span {
+                color: #A7BBC7;
+                margin-left: 15px;
+            }
         }
 
         .item {
@@ -2763,6 +2827,47 @@ html {
                 }
             }
         }
+
+        &.production {
+            .tr {
+                grid-template-columns: 48px 20% minmax(0, 1fr) 20%;
+            }
+
+            .body {
+                .tr {
+                    border: none;
+
+                    &.eat:not(:first-child) {
+                        border-top: 1px solid #A7BBC7;
+                        margin-top: -1px;
+                    }
+
+                    &:not(:last-child) {
+                        border-bottom: 1px dashed #A7BBC7;
+                    }
+
+                    &.eat {
+                        background: #EEF1F8;
+                        font-weight: 500;
+                    }
+
+                    &.tr-comment {
+
+                    }
+
+                    .td-diet {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: wrap;
+
+                        .tags {
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .inner {
@@ -2784,6 +2889,7 @@ html {
 
                 &:last-child {
                     border-bottom: none;
+                    border-radius: 0 0 16px 16px;
                 }
 
                 &.blue {
@@ -2881,6 +2987,26 @@ html {
                     text-align: center;
                 }
 
+                &:not(.td-diet) {
+                    .tags {
+                        & + .diet {
+                            margin-left: 8px;
+                        }
+                    }
+                }
+
+                &.td-diet {
+                    .tags {
+                        & + .diet {
+                            margin-top: 4px;
+                        }
+                    }
+                }
+
+                &.td-group-name {
+                    display: flex;
+                }
+
                 .text {
                     font-weight: 500;
                 }
@@ -2891,6 +3017,14 @@ html {
                     color: #A7BBC7;
                     text-align: center;
                     line-height: 1.3;
+                }
+
+                .tags {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: flex-start;
+                    align-items: flex-start;
+                    gap: 8px;
                 }
 
                 .tag {
@@ -2906,10 +3040,6 @@ html {
                     font-weight: 500;
                     font-size: 12px;
                     text-align: center;
-
-                    &:not(:last-child) {
-                        margin-right: 8px;
-                    }
 
                     &.pink {
                         background: #FFDAEE;
@@ -3015,6 +3145,16 @@ html {
                         margin-bottom: 6px;
                     }
                 }
+
+                .group-name {
+                    background: #A7BBC7;
+                    padding: 4px 8px;
+                    border-radius: 100px;
+
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                }
             }
         }
     }
@@ -3055,3 +3195,4 @@ html {
         display: flex;
     }
 }
+

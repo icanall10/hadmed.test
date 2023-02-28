@@ -444,6 +444,15 @@
                 });
             });
 
+
+        $('.report-block .tags .more')
+            .once()
+            .click(function () {
+                $(this)
+                    .closest('.tags')
+                    .toggleClass('open');
+            });
+
     }
 
 
