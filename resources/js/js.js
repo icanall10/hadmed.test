@@ -453,6 +453,54 @@
                     .toggleClass('open');
             });
 
+
+        $('.card-header-block .input-controls')
+            .find('.minus, .plus')
+            .once()
+            .click(function (e) {
+                e.preventDefault();
+
+                let $this = $(this);
+                let wrapper = $this.closest('.input-controls');
+                let input = wrapper.find('input[type="text"]');
+                let value = parseInt(input.val() || 0);
+
+                if ($this.hasClass('plus')) {
+                    value++;
+                } else {
+                    value--;
+                }
+
+                if (value < 1) {
+                    value = 1;
+                }
+
+                input.val(value);
+            });
+
+
+        $('.card-block .table .tr.parent > .td')
+            .once()
+            .click(function () {
+                $(this)
+                    .closest('.tr')
+                    .toggleClass('open');
+            });
+
+
+        $('.card-block .card-detail .toggle')
+            .once('toggle')
+            .click(function (e) {
+                e.preventDefault();
+
+                let $this = $(this);
+                let wrapper = $this.closest('.card-detail');
+                let inner = wrapper.find('.content');
+
+                wrapper.toggleClass('open');
+                inner.stop().slideToggle('fast');
+            });
+
     }
 
 
