@@ -3424,10 +3424,15 @@ html {
 
                         .tr {
                             border-radius: 0 !important;
+                            padding-left: 10px;
 
                             .td {
                                 &.name {
-                                    padding-left: 32px;
+                                    overflow: auto;
+
+                                    .value {
+                                        min-width: 150px;
+                                    }
                                 }
                             }
                         }
